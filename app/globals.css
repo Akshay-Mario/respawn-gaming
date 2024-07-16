@@ -105,3 +105,23 @@ a {
     color-scheme: dark;
   }
 } */
+
+/* @font-face {
+  font-family: 'Vobca';
+  src: url('../public/assets/fonts/Vobca-Black.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+} */
+
+@font-face {
+  font-family: 'Vobca-Black';
+  src: url('../public/assets/fonts/Vobca-Black.ttf')  format('truetype');
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('../public/assets/fonts/Poppins-Medium.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+

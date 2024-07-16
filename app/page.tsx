@@ -4,7 +4,10 @@ import styles from "./page.module.scss"
 export default function Home() {
   return (
     <main className={styles.main}>
-      
+      <div>
+        <p className={styles.fontName}>Respawn Gaming</p>
+        <p>stay tuned</p>
+      </div>
     </main>
   );
 }
