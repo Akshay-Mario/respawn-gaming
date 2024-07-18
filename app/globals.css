@@ -5,12 +5,13 @@
     "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
     "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
   --font-Vobca: 'Vobca-Black', 'Courier New', monospace, Sans-serif;
-  --font-Poppins: 'Poppins', 'Courier New', monospace, Sans-serif;
+  --font-Poppins: 'Poppins-Medium', 'Courier New', monospace, Sans-serif;
   --foreground: #262626;
   --background-color-light: #F3F3F3;
   --background-color-dark: #0D1116;
   --background-color-dark2: #161616;
   --background-color-dark3: #262626;
+  --font-color-dimmed: #cbcbcb;
   --font-color-light: #F7F7F7;
   --font-color-dark: #282828; 
   --font-color-red: #E82E25;
@@ -115,12 +116,12 @@ a {
 }
 
 @font-face {
-  font-family: 'Poppins';
-  src: url('../public/assets/fonts/Poppins-Medium.ttf') format('ttf');
+  font-family: 'Poppins-Medium';
+  src: url('../public/assets/fonts/Poppins-Medium.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'Ethnocentric';
-  src: url('../public/assets/fonts/ethnocentric.ttf') format('ttf');
+  src: url('../public/assets/fonts/ethnocentric.ttf') format('truetype');
 }
 

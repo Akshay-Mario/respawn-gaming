@@ -2,14 +2,15 @@
     display: flex;
     flex-direction: row;
     // width: 100%;
-    padding: 30px;
+    padding: 20px;
     align-items: center;
     justify-content: center;
     position: relative;
+    background-color: var(--background-color-dark);
 
     img {
         position: absolute;
-        left: 3%;
+        left: 6%;
     }
 
     .titleLinks {
@@ -17,8 +18,8 @@
         flex-direction: row;
 
         a {
-            font-family: 'Poppins', 'Courier New', monospace, Sans-serif;
-            font-weight: 600;
+            font-family: var(--font-Poppins);
+            font-weight: 100;
             font-size: small;
             padding-inline: 20px;
 
@@ -38,8 +39,8 @@
     justify-content: space-between;
     // box-shadow: 00px 0px 20px #2ff7f085;
     background-image: url('../../../public/assets/images/gamelist.webp');
-    background-size: 800px;
-    background-position: 120% 50%;
+    background-size: 1000px;
+    background-position: 150% 50%;
     background-repeat: no-repeat;
     margin-bottom: -20px;
 
@@ -48,7 +49,7 @@
         color: var(--font-color-light);
         font-size: 100px;
         line-height: 100px;
-        text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.18);
         z-index: 1;
     }
 
@@ -105,10 +106,56 @@
     background-color: var(--background-color-dark);
     border-radius: 25px 25px 0px 0px;
     padding: 5%;
-    height: 90vh;
+    height: max-content;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     box-shadow: 00px 0px 40px #7B29EF;
+    background-image: url('../../../public/assets/images/ps5Wireframe.svg');
+    background-size: 20%;
+    background-position: 50% -100%;
+    background-repeat: no-repeat;
+
+    h1 {
+        font-size: 45px;
+    }
+
+    .mainGrid {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        margin: 10px;
+        margin-top: 60px;
+        .gridDiv {
+            display: flex;
+            flex-direction: column;
+            background-color: #161b22a8;
+            padding: 20px;
+            border-radius: 20px;
+            margin: 10px;
+            width: 20%;
+            height: 300px;
+            border: 1px solid #232930;
+            align-items: center;
+
+            .imageTextDiv {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+                align-items: center;
+                width: 75%;
+                margin-top: 20px;
+            }
+            .textDescription {
+                margin-top: 40px;
+                text-align: center;
+                font-family: var(--font-Poppins);
+                font-size: small;
+                color: var(--font-color-dimmed);
+            }
+        }
+       
+    }
   
 }
