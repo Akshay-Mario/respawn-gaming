@@ -29,34 +29,86 @@
 
 
 .section1 {
-    background-color: var(--background-color-light);
-    border-radius: 25px;
+    background-color: var(--background-color-dark2);
+    border-radius: 25px 25px 0px 0px;
     padding: 5%;
     height: 90vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    // box-shadow: 00px 0px 20px #2ff7f085;
+    background-image: url('../../../public/assets/images/gamelist.webp');
+    background-size: 800px;
+    background-position: 120% 50%;
+    background-repeat: no-repeat;
+    margin-bottom: -20px;
+
 
     h1 {
-        color: var(--font-color-dark);
+        color: var(--font-color-light);
         font-size: 100px;
         line-height: 100px;
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        z-index: 1;
     }
+
+
 
     h6 {
         font-size: 20px;
-        color: var(--font-color-dark);
+        color: var(--font-color-light);
+        z-index: 1;
+
+
         span {
+            padding-left: 10px;
             font-size: larger;
             color: var(--font-color-red);
-            font-family: 'Ethnocentric', 'Courier New', monospace, Sans-serif;;
+            font-family: 'Ethnocentric', 'Courier New', monospace, Sans-serif;
+            
         }
     }
 
     a {
-        color: var(--font-color-dark);
-        font-size: x-large;
+        color: var(--font-color-light);
+        font-size: larger;
+        display: flex;
+        align-items: center;
+
         // align-self: flex-end;
-        
+        span {
+            padding-right: 10px;
+        }
+
     }
+
+    .ps5Main {
+        position: absolute;
+        left: 350px;
+        bottom: 10dvh;
+        overflow: hidden;
+        filter: drop-shadow(0 0 5px rgba(225, 225, 225, 0.703));
+    }
+
+    .ps5Main2 {
+        position: absolute;
+        left: 400px;
+        bottom: 45dvh;
+        overflow: hidden;
+        filter: drop-shadow(0 0 5px rgba(225, 225, 225, 0.703));
+    }
+
+}
+
+
+.section2 {
+    background-color: var(--background-color-dark);
+    border-radius: 25px 25px 0px 0px;
+    padding: 5%;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 00px 0px 40px #7B29EF;
+  
 }

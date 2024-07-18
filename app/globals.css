@@ -9,9 +9,13 @@
   --foreground: #262626;
   --background-color-light: #F3F3F3;
   --background-color-dark: #0D1116;
+  --background-color-dark2: #161616;
+  --background-color-dark3: #262626;
   --font-color-light: #F7F7F7;
   --font-color-dark: #282828; 
   --font-color-red: #E82E25;
+
+
 
   /* --primary-glow: conic-gradient(
     from 180deg at 50% 50%,
@@ -96,7 +100,7 @@ body {
 
 body {
   color: rgb(var(--foreground-rgb));
-  background-color: var(--background-color-dark);
+  background-color: var(--background-color-dark2);
 }
 
 a {
