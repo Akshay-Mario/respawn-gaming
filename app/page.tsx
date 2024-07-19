@@ -18,6 +18,7 @@ export default function Home() {
 
   return (
     <>
+
       <MantineProvider theme={theme} defaultColorScheme="dark" withGlobalClasses={true} >
         <ScrollArea>
           <LandingPage />
