@@ -1,10 +1,11 @@
-import { Anchor, Container, Group, Image, Paper, Text, Title } from "@mantine/core";
+import { Anchor, Button, Container, Group, Image, Paper, Text, Title } from "@mantine/core";
 import styles from './landing-page.module.scss'
 import { useEffect, useState } from "react";
 
 
 export default function LandingPage() {
 
+    const [menuOverlayToggle, setmenuOverlayToggle] = useState(false)
     const [offsetY, setOffsetY] = useState(0);
 
     const handleScroll = () => {
@@ -71,6 +72,9 @@ export default function LandingPage() {
 
     ]
 
+    const toggleNavbarMobile = () => {
+        setmenuOverlayToggle(!menuOverlayToggle);
+    }
 
     const gridDetails = gridData.map((item, index) => {
         // console.log("index :",index)
@@ -104,6 +108,52 @@ export default function LandingPage() {
 
     return (
         <>
+            <Paper className={`${styles.titleNavMobile} ${menuOverlayToggle && styles.overlayMenu}`}>
+                <div className={styles.logoHam}>
+                    <Image
+                        width={30}
+                        src={'assets/images/rLogo.svg'}
+                        alt={'Respawn Gaming Logo'}
+                    />
+
+                    <button
+                        className={styles.hamburger}
+                        onClick={toggleNavbarMobile}
+                        aria-label="Toggle navigation"
+                    >
+                        <Image
+                            width={20}
+                            src={'assets/images/hamburger.svg'}
+                            alt={'Respawn Gaming Logo'}
+                        />
+                    </button>
+                </div>
+                {menuOverlayToggle &&
+                    <div>
+                        <Group className={styles.titleLinksMobile}>
+                            <Anchor href="#Home" target="_blank" >
+                                Home
+                            </Anchor>
+                            <Anchor href="#Services" target="_blank" >
+                                Services
+                            </Anchor>
+                            {/* <Anchor href="#Gallery" target="_blank" >
+                        Gallery
+                    </Anchor>
+                    <Anchor href="#Pricing" target="_blank" >
+                        Pricing
+                    </Anchor> */}
+                            <Anchor href="#About" target="_blank" >
+                                About
+                            </Anchor>
+                            <Anchor href="#Contact" target="_blank" >
+                                Contact
+                            </Anchor>
+                        </Group>
+                    </div>
+                }
+            </Paper >
+
             <Paper
                 className={`${styles.titleNav}`}>
                 <Image
@@ -119,12 +169,12 @@ export default function LandingPage() {
                     <Anchor href="#Services" target="_blank" >
                         Services
                     </Anchor>
-                    <Anchor href="#Gallery" target="_blank" >
+                    {/* <Anchor href="#Gallery" target="_blank" >
                         Gallery
                     </Anchor>
                     <Anchor href="#Pricing" target="_blank" >
                         Pricing
-                    </Anchor>
+                    </Anchor> */}
                     <Anchor href="#About" target="_blank" >
                         About
                     </Anchor>
@@ -140,15 +190,11 @@ export default function LandingPage() {
                     transform: `translateY(${offsetY * 0.3}px)`
                 }}
             >
-                <div style={{ display: 'flex', flexDirection: 'column' }}>
+                <div className={styles.homeQuote}>
                     <Title order={1}>PLAY,</Title>
                     <Title order={1}>RELAX,</Title>
                     <Title style={{ marginBottom: '0.2%' }} order={1}>RESPAWN.</Title>
-                    <Title order={6}>JOIN US AT <span> <Image
-                        width={310}
-                        src={'assets/images/respawnText.svg'}
-                        alt={'Respawn Gaming Logo'}
-                    /> .</span></Title>
+                    <Title order={6}>JOIN US AT <span> RESPAWN GAMING.</span></Title>
                 </div>
                 <Anchor href="https://www.google.com/maps/dir//Tata+Consultancy+Services,+Infopark+E,+Kakkanad,+Kerala" target="_blank" >
                     <span>
@@ -163,7 +209,7 @@ export default function LandingPage() {
                 <Image className={styles.ps5Main}
                     width={150}
                     style={{
-                        zIndex: 2,
+                        zIndex: 0,
                         // transform: `translateY(-${offsetY * 0.2}px)` 
                     }}
                     src={'assets/images/controller1.svg'}
@@ -182,7 +228,7 @@ export default function LandingPage() {
             <Container className={styles.section2}
                 style={{
                     zIndex: 10,
-                    transform: `translateY(${offsetY * 0}px)`
+                    transform: `translateY(${offsetY * 0.2}px)`
                 }}
             >
                 <Title order={1}>OUR SERVICES</Title>
@@ -194,7 +240,7 @@ export default function LandingPage() {
             <Container className={styles.section3}
                 style={{
                     zIndex: 10,
-                    transform: `translateY(${offsetY * 0}px)`
+                    transform: `translateY(${offsetY * 0.1}px)`
                 }}
             >
                 <Title order={1}>ABOUT US</Title>

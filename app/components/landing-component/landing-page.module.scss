@@ -1,35 +1,103 @@
+.titleNavMobile {
+    background-color: var(--background-color-dark1);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 100dvw;
+    // position: fixed;
+    // top: 0;
+    // left: 0;
+    // right: 0;
+    // z-index: 2000;
+    // backdrop-filter: blur(5px);
+    // -webkit-backdrop-filter: blur(5px);
+    // background: var(--background-color-dark);
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+
+    .logoHam {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .hamburger {
+        background-color: var(--background-color-dark);
+        padding: 2px 10px;
+        margin: 3px 2px;
+        border-radius: 5px;
+        border: 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+
+    @media (min-width: 768px) {
+        display: none;
+    }
+}
+
+.overlayMenu {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 2000;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.779);
+    width: 100%;
+    height: 100%;
+    align-items: flex-start;
+
+}
+
+
+.titleLinksMobile {
+    padding: 20% 0%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 87dvw;
+
+    a {
+        // padding: 0 10px;
+        padding-bottom: 30px;
+        font-size: 0.9rem;
+        font-size: 25px;
+        font-weight: 400;
+        line-height: 1;
+        font-family: var(--font-Poppins-regular);
+
+        &:hover {
+            color: rgb(100, 100, 100);
+        }
+    }
+}
+
+
 .titleNav {
     display: flex;
     flex-direction: row;
-    // width: 100%;
+    width: 100dvw;
     padding: 20px;
     align-items: center;
     justify-content: center;
     position: relative;
-    background-color: var(--background-color-dark);
+    background-color: var(--background-color-darker);
+    // box-shadow: 0px 10px 15px #295eeff1;
+    z-index: 5;
 
-    @media (max-width: 576px) {
-    }
 
-    @media (min-width: 576px) and (max-width: 767px) {
-    }
-
-    @media (min-width: 768px) and (max-width: 991px) {
-    }
-
-    @media (min-width: 992px) and (max-width: 1199px) {
-    }
-
-    @media (min-width: 1200px) {
-    }
 
     img {
-        position: absolute;
-        left: 6%;
+        position: relative;
+        left: 0%;
     }
 
     .titleLinks {
-        display: flex !important;
+        display: flex;
         flex-direction: row;
 
         a {
@@ -41,6 +109,29 @@
         }
 
     }
+
+    @media (max-width: 576px) {
+        justify-content: flex-start;
+        padding: 30px;
+        display: none;
+    }
+
+    @media (min-width: 576px) and (max-width: 767px) {
+        justify-content: flex-start;
+        padding: 40px;
+        display: none;
+    }
+
+    @media (min-width: 768px) and (max-width: 991px) {}
+
+    @media (min-width: 992px) and (max-width: 1199px) {}
+
+    @media (min-width: 1200px) {
+        img {
+            position: absolute;
+            left: 6%;
+        }
+    }
 }
 
 
@@ -48,23 +139,28 @@
     background-color: var(--background-color-dark2);
     border-radius: 25px 25px 0px 0px;
     padding: 5%;
-    height: 90vh;
+    height: 90dvh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     // box-shadow: 00px 0px 20px #2ff7f085;
     background-image: url('../../../public/assets/images/gamelist.webp');
     background-size: 1000px;
-    background-position: 150% 50%;
+    background-position: 700px -300px;
     background-repeat: no-repeat;
     // margin-bottom: -20px;
+
+    .homeQuote {
+        display: flex;
+        flex-direction: column;
+    }
 
 
     h1 {
         color: var(--font-color-light);
         font-size: 100px;
         line-height: 100px;
-        text-shadow: 0 0 10px rgba(255, 255, 255, 0.18);
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.309);
         z-index: 1;
     }
 
@@ -114,6 +210,106 @@
         filter: drop-shadow(0 0 5px rgba(225, 225, 225, 0.703));
     }
 
+    @media (max-width: 576px) {
+        background-position: -200px -300px;
+        // margin-top: 70px;
+        justify-content: space-between;
+
+        h1 {
+            font-size: 50px;
+            line-height: normal;
+        }
+
+        h6 {
+            font-size: 10px;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.333);
+
+        }
+
+        .homeQuote {
+            justify-self: center;
+        }
+
+        a {
+            font-size: 10px;
+            justify-self: flex-end;
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.573);
+
+        }
+    }
+
+    @media (min-width: 576px) and (max-width: 767px) {
+        background-position: 200px -300px;
+
+        // margin-top: 70px;
+        h1 {
+            font-size: 50px;
+            line-height: normal;
+        }
+
+        h6 {
+            font-size: 10px;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.337);
+
+        }
+
+        .homeQuote {
+            justify-self: center;
+        }
+
+        a {
+            font-size: 10px;
+            justify-self: flex-end;
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.573);
+
+        }
+
+    }
+
+    @media (min-width: 768px) and (max-width: 991px) {
+        background-position: 400px -300px;
+
+
+    }
+
+    @media (min-width: 992px) and (max-width: 1199px) {
+        background-position: 400px -300px;
+
+    }
+
+    @media (min-width: 1200px) and (max-width: 1440px) {
+        background-position: 700px -300px;
+    }
+
+    @media (min-width: 1440px) {
+        background-position: 100% 50%;
+    }
+
+    @media (max-height: 500px) {
+
+        h1 {
+            font-size: 50px;
+            line-height: normal;
+        }
+
+        h6 {
+            font-size: 10px;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.337);
+
+        }
+
+        .homeQuote {
+            justify-self: center;
+        }
+
+        a {
+            font-size: 10px;
+            justify-self: flex-end;
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.573);
+
+        }
+    }
+
 }
 
 
@@ -130,7 +326,7 @@
     background-size: 20%;
     background-position: 50% -100%;
     background-repeat: no-repeat;
-    // margin-bottom: -20px;
+    margin-bottom: 90px;
 
     h1 {
         font-size: 45px;
@@ -178,6 +374,139 @@
 
     }
 
+    @media (max-width: 576px) {
+        background-position: 300% 40%;
+        background-size: 90%;
+        margin-bottom: 10px;
+        padding-bottom: 200px;
+        padding-top: 50px;
+
+        h1 {
+            font-size: 35px;
+            align-self: center;
+        }
+
+        .mainGrid {
+            flex-direction: column;
+            //todo change width setting
+            width: 100%;
+
+            .gridDiv {
+                padding: 50px 70px;
+                width: 90%;
+                margin-bottom: 40px;
+
+                .imageTextDiv {
+                    justify-content: center;
+
+                    h3 {
+                        padding-left: 10px;
+                    }
+                }
+            }
+
+        }
+    }
+
+    @media (min-width: 576px) and (max-width: 767px) {
+        background-position: 150% 40%;
+        background-size: 60%;
+        margin-bottom: 10px;
+        padding-bottom: 200px;
+
+        h1 {
+            font-size: 35px;
+            align-self: center;
+        }
+
+        .mainGrid {
+            flex-direction: column;
+            //todo change width setting
+            width: 100%;
+
+            .gridDiv {
+                padding: 50px 70px;
+                width: 70%;
+                margin-bottom: 40px;
+
+                .imageTextDiv {
+                    justify-content: center;
+
+                    h3 {
+                        padding-left: 10px;
+                    }
+                }
+            }
+
+        }
+    }
+
+    @media (min-width: 768px) and (max-width: 991px) {
+        background-position: 150% 80%;
+        background-size: 60%;
+        margin-bottom: 10px;
+        padding-bottom: 200px;
+
+        h1 {
+            font-size: 35px;
+            align-self: center;
+        }
+
+        .mainGrid {
+            flex-direction: column;
+            //todo change width setting
+            width: 100%;
+
+            .gridDiv {
+                padding: 50px 70px;
+                width: 70%;
+                margin-bottom: 40px;
+
+                .imageTextDiv {
+                    justify-content: center;
+
+                    h3 {
+                        padding-left: 10px;
+                    }
+                }
+            }
+
+        }
+    }
+
+    @media (min-width: 992px) and (max-width: 1199px) {
+        background-position: 50% -90%;
+        background-size: 25%;
+
+        h1 {
+            font-size: 35px;
+        }
+
+        .mainGrid {
+            .gridDiv {
+                width: 25%;
+            }
+        }
+    }
+
+    @media (min-width: 1200px) and (max-width: 1440px) {
+        background-position: 50% -50%;
+        background-size: 25%;
+
+        .mainGrid {
+            .gridDiv {
+                width: 25%;
+            }
+        }
+
+
+    }
+
+    @media (min-width: 1441px) {
+        background-position: 50% -100%;
+
+    }
+
 }
 
 
@@ -194,7 +523,7 @@
     background-size: 45%;
     background-position: 80% -90%;
     background-repeat: no-repeat;
-    margin-bottom: -19px;
+    margin-bottom: 90px;
 
     h1 {
         font-size: 45px;
