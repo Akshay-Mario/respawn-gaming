@@ -1,4 +1,4 @@
-import { Anchor, Container, Grid, Group, Image, Paper, SimpleGrid, Text, Title } from "@mantine/core";
+import { Anchor, Container, Group, Image, Paper, Text, Title } from "@mantine/core";
 import styles from './landing-page.module.scss'
 import { useEffect, useState } from "react";
 
