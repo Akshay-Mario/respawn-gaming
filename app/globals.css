@@ -113,6 +113,9 @@ a {
   text-decoration: none;
 }
 
+.d-none {
+  display: none;
+}
 
 @font-face {
   font-family: 'Vobca-Black';
