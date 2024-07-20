@@ -79,7 +79,7 @@ export default function LandingPage() {
                 <div className={styles.imageTextDiv}>
                     <Image
                         src={item.svg}
-                        alt="Descriptive alt text"
+                        alt={item.title}
                         width={32}
                         height={32}
                     />
@@ -92,7 +92,7 @@ export default function LandingPage() {
 
     const socials = socialsData.map((item, index) => {
         return (
-            <Image
+            <Image key={index}
                 className={styles.socials}
                 width={50}
                 src={item.imageurl}
@@ -156,6 +156,7 @@ export default function LandingPage() {
                             color={'white'}
                             width={10}
                             src={'assets/images/myLocation.svg'}
+                            alt={"find direction to respawn gaming"}
                         />
                     </span>Locate us on map
                 </Anchor>
@@ -166,7 +167,7 @@ export default function LandingPage() {
                         // transform: `translateY(-${offsetY * 0.2}px)` 
                     }}
                     src={'assets/images/controller1.svg'}
-                    alt={'Respawn Gaming Logo'}
+                    alt={'dual sensor controller ps5'}
                 />
                 <Image className={styles.ps5Main2}
                     width={70}
@@ -175,7 +176,7 @@ export default function LandingPage() {
                         // transform: `translateY(${offsetY * 0.07}px)` 
                     }}
                     src={'assets/images/controller2.svg'}
-                    alt={'Respawn Gaming Logo'}
+                    alt={'dual sensor controller ps5'}
                 />
             </Container>
             <Container className={styles.section2}
