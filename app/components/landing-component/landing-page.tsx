@@ -215,7 +215,7 @@ export default function LandingPage() {
                                 //     zIndex: 0,
                                 //     // transform: `translateY(${offsetY * 0.07}px)` 
                                 // }}
-                                src={'assets/images/respawndark.svg'}
+                                src={'assets/images/respawnDark.svg'}
                                 alt={'Respawn Gaming Logo'}
                             />
                             <div className={styles.socialsDiv}>
@@ -263,6 +263,16 @@ export default function LandingPage() {
                                 />
                                 respawngamingllp.gmail.com
                             </a>
+                            <a className={styles.direction} href="https://www.google.com/maps/dir//Tata+Consultancy+Services,+Infopark+E,+Kakkanad,+Kerala" target="_blank" >
+                                <Image
+                                    color={'red'}
+                                    width={13}
+                                    src={'assets/images/locationDark.svg'}
+                                    alt={"find direction to respawn gaming"}
+                                />
+                                <Title order={4}>Find us on Google maps</Title>
+                            </a>
+
                         </div>
                     </div>
                     <div className={styles.bottomDiv}>
