@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 686.77 204">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #282828;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4 {
+        stroke-width: 0px;
+      }
+
+      .cls-5 {
+        font-size: 115.79px;
+      }
+
+      .cls-5, .cls-3, .cls-6 {
+        fill: #2b2b2b;
+      }
+
+      .cls-5, .cls-6 {
+        font-family: EthnocentricRg-Regular, Ethnocentric;
+      }
+
+      .cls-2 {
+        fill: #f46a25;
+      }
+
+      .cls-6 {
+        font-size: 67.73px;
+      }
+
+      .cls-4 {
+        fill: #fff;
+      }
+
+      .cls-7 {
+        filter: url(#outer-glow-3);
+      }
+
+      .cls-8 {
+        filter: url(#outer-glow-1);
+      }
+    </style>
+    <filter id="outer-glow-1" filterUnits="userSpaceOnUse">
+      <feOffset dx="0" dy="0"/>
+      <feGaussianBlur result="blur" stdDeviation="20"/>
+      <feFlood flood-color="#ed5520" flood-opacity=".73"/>
+      <feComposite in2="blur" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="outer-glow-3" filterUnits="userSpaceOnUse">
+      <feOffset dx="0" dy="0"/>
+      <feGaussianBlur result="blur-2" stdDeviation="8"/>
+      <feFlood flood-color="#231f20" flood-opacity=".28"/>
+      <feComposite in2="blur-2" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g>
+    <rect class="cls-1" x="0" y=".29" width="152.79" height="185.02" rx="21.02" ry="21.02"/>
+    <g class="cls-8">
+      <g>
+        <rect class="cls-4" x="51.87" y="150.16" width="20.92" height="20.92" rx="10.46" ry="10.46" transform="translate(-98.35 222.77) rotate(-89.94)"/>
+        <path class="cls-2" d="M176.78.78H53.36l-.15,134.88,18.33,13.24c6.67,4.82,8.17,14.13,3.36,20.8h0c-4.82,6.67-14.13,8.17-20.8,3.36l-21.68-15.66c-1.34-.97-2.47-2.13-3.38-3.4-3.43-2.73-5.63-6.95-5.63-11.67L23.57.78h-9.49C6.31.78,0,7.09,0,14.86v162.7c0,7.78,6.31,14.08,14.08,14.08h162.7c7.78,0,14.08-6.31,14.08-14.08V14.86c0-7.78-6.31-14.08-14.08-14.08Z"/>
+      </g>
+      <text class="cls-5" transform="translate(58.5 109.07)"><tspan x="0" y="0">R</tspan></text>
+    </g>
+  </g>
+  <g class="cls-7">
+    <path class="cls-3" d="M275.2,69.02l-10.34,11.65h-50.06v-45.31h60.24l-10.42,11.79h-33.66v5.42h41.2l-9.25,10.29h-31.95v6.16h44.23Z"/>
+    <path class="cls-3" d="M328.91,53.45c12.67,0,19.51,4.13,19.51,12.39,0,9.28-6.45,14.83-22.31,14.83h-48.42l10.34-11.65h39.33c3.81,0,5.52-.95,5.52-3.32s-1.71-3.25-5.52-3.25h-28.29c-13.37,0-19.51-5.21-19.51-13,0-8.53,6.53-14.09,22.31-14.09h45.16l-10.34,11.79h-36.07c-3.73,0-5.52.81-5.52,3.12s1.79,3.18,5.52,3.18h28.29Z"/>
+    <path class="cls-3" d="M398.62,69.09h-27.21v11.58h-16.01v-23.17h44.77c4.97,0,7.85-2.1,7.85-5.22s-2.88-5.15-7.85-5.15h-44.77l10.65-11.79h32.65c16.09,0,25.5,6.91,25.5,17s-9.41,16.73-25.57,16.73Z"/>
+    <path class="cls-3" d="M442.07,80.67l9.72-11.65h13.06c3.11,0,6.76,0,9.25.14-1.4-1.63-3.58-4.4-5.29-6.57l-9.33-11.99-24.41,30.07h-19.04l33.35-40.98c2.18-2.64,5.36-5.08,10.42-5.08s8.01,2.23,10.26,5.08l32.49,40.98h-60.47Z"/>
+    <path class="cls-3" d="M552.75,63.81c-4.51-6.98-6.61-10.36-8.4-13.62-1.63,3.25-3.73,6.57-8.24,13.55l-8.32,12.87c-1.87,2.91-4.66,4.81-8.86,4.81s-7.62-2.03-9.02-6.23l-13.21-39.83h16.09l4.9,15.78c1.63,5.08,2.72,8.81,3.5,12.46,1.71-3.18,3.73-6.64,7.31-12.53l7-11.38c2.72-4.47,5.36-5.08,9.17-5.08s6.61.61,9.33,5.08l6.92,11.45c3.89,6.23,5.67,9.42,7.31,12.46.85-3.59,2.02-7.45,3.58-12.46l4.9-15.78h15.7l-13.45,39.83c-1.4,4.2-4.97,6.23-9.02,6.23s-6.92-1.83-8.86-4.81l-8.32-12.8Z"/>
+    <path class="cls-3" d="M642.83,78.98l-31.87-24.93v26.62h-14.61v-37.59c0-6.03,4.2-8.47,8.78-8.47,1.94,0,3.89.41,6.45,2.44l31.87,24.93v-26.62h14.69v37.52c0,6.03-4.2,8.53-8.86,8.53-2.02,0-3.96-.41-6.45-2.44Z"/>
+  </g>
+  <text class="cls-6" transform="translate(208.75 137.17) scale(1.2 1)"><tspan x="0" y="0">GAMING</tspan></text>
+</svg>

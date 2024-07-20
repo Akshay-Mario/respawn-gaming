@@ -5,15 +5,19 @@
     "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
     "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
   --font-Vobca: 'Vobca-Black', 'Courier New', monospace, Sans-serif;
+  --font-Vobca-Regular: 'Vobca-Regular', 'Courier New', monospace, Sans-serif;
   --font-Poppins: 'Poppins-Medium', 'Courier New', monospace, Sans-serif;
+  --font-Poppins-regular: 'Poppins-Regular', 'Courier New', monospace, Sans-serif;
+  --font-Helvetica: 'Helvetica', 'Courier New', monospace, Sans-serif;
   --foreground: #262626;
   --background-color-light: #F3F3F3;
   --background-color-dark: #0D1116;
   --background-color-dark2: #161616;
   --background-color-dark3: #262626;
-  --font-color-dimmed: #cbcbcb;
+  --background-color-darker: #111010;
+  --font-color-dimmed: #a1a1a1;
   --font-color-light: #F7F7F7;
-  --font-color-dark: #282828; 
+  --font-color-dark: #2B2B2B; 
   --font-color-red: #E82E25;
 
 
@@ -116,6 +120,12 @@ a {
 }
 
 @font-face {
+  font-family: 'Vobca-Regular';
+  src: url('../public/assets/fonts/Vobca-Regular.ttf')  format('truetype');
+}
+
+
+@font-face {
   font-family: 'Poppins-Medium';
   src: url('../public/assets/fonts/Poppins-Medium.ttf') format('truetype');
 }
@@ -124,4 +134,15 @@ a {
   font-family: 'Ethnocentric';
   src: url('../public/assets/fonts/ethnocentric.ttf') format('truetype');
 }
+
+@font-face {
+  font-family: 'Helvetica';
+  src: url('../public/assets/fonts/Helvetica.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Poppins-Regular';
+  src: url('../public/assets/fonts/Poppins-Regular.ttf') format('truetype');
+}
+
 

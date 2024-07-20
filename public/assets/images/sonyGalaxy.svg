@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1156.23 977.1">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-3 {
+        stroke-width: 0px;
+      }
+
+      .cls-1, .cls-3 {
+        fill: #777;
+      }
+
+      .cls-1, .cls-4, .cls-5, .cls-6, .cls-7 {
+        opacity: .68;
+      }
+
+      .cls-2 {
+        fill: #606060;
+      }
+
+      .cls-5, .cls-6, .cls-7 {
+        fill: none;
+        stroke: #777;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-6 {
+        filter: url(#outer-glow-2);
+      }
+
+      .cls-7 {
+        filter: url(#outer-glow-1);
+      }
+    </style>
+    <filter id="outer-glow-1" filterUnits="userSpaceOnUse">
+      <feOffset dx="0" dy="0"/>
+      <feGaussianBlur result="blur" stdDeviation="10"/>
+      <feFlood flood-color="#db4921" flood-opacity=".11"/>
+      <feComposite in2="blur" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="outer-glow-2" filterUnits="userSpaceOnUse">
+      <feOffset dx="0" dy="0"/>
+      <feGaussianBlur result="blur-2" stdDeviation="10"/>
+      <feFlood flood-color="#db4921" flood-opacity=".11"/>
+      <feComposite in2="blur-2" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <circle class="cls-5" cx="788.78" cy="475.91" r="366.95"/>
+  <circle class="cls-5" cx="787.99" cy="474.47" r="250.15"/>
+  <rect class="cls-1" x="615.23" y="271.83" width="24.11" height="24.02" transform="translate(29.53 -57.83) rotate(5.41)"/>
+  <circle class="cls-3" cx="1079.57" cy="702.72" r="30.16"/>
+  <circle class="cls-7" cx="488.55" cy="488.55" r="488.05"/>
+  <polygon class="cls-1" points="80.79 165.43 106.5 222.69 143.23 171.8 80.79 165.43"/>
+  <g class="cls-4">
+    <rect class="cls-2" x="370.65" y="722.52" width="12.8" height="66.41" transform="translate(492.94 -80.85) rotate(34.4)"/>
+    <rect class="cls-2" x="370.65" y="722.52" width="12.8" height="66.41" transform="translate(1213.62 871.62) rotate(124.4)"/>
+  </g>
+  <circle class="cls-6" cx="486.11" cy="485.81" r="294.29"/>
+</svg>

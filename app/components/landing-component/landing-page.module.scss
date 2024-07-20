@@ -42,7 +42,7 @@
     background-size: 1000px;
     background-position: 150% 50%;
     background-repeat: no-repeat;
-    margin-bottom: -20px;
+    // margin-bottom: -20px;
 
 
     h1 {
@@ -66,7 +66,7 @@
             font-size: larger;
             color: var(--font-color-red);
             font-family: 'Ethnocentric', 'Courier New', monospace, Sans-serif;
-            
+
         }
     }
 
@@ -110,14 +110,17 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    box-shadow: 00px 0px 40px #7B29EF;
+    box-shadow: 0px -15px 45px #7c29eff1;
     background-image: url('../../../public/assets/images/ps5Wireframe.svg');
     background-size: 20%;
     background-position: 50% -100%;
     background-repeat: no-repeat;
+    // margin-bottom: -20px;
 
     h1 {
         font-size: 45px;
+        font-family: var(--font-Helvetica);
+
     }
 
     .mainGrid {
@@ -127,6 +130,7 @@
         align-items: center;
         margin: 10px;
         margin-top: 60px;
+
         .gridDiv {
             display: flex;
             flex-direction: column;
@@ -147,6 +151,7 @@
                 width: 75%;
                 margin-top: 20px;
             }
+
             .textDescription {
                 margin-top: 40px;
                 text-align: center;
@@ -155,7 +160,128 @@
                 color: var(--font-color-dimmed);
             }
         }
-       
+
     }
+
+}
+
+
+.section3 {
+    background-color: var(--background-color-darker);
+    border-radius: 25px 25px 0px 0px;
+    padding: 12% 10%;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0px -15px 45px #ef2957bc;
+    background-image: url('../../../public/assets/images/sonygalaxy.svg');
+    background-size: 45%;
+    background-position: 80% -90%;
+    background-repeat: no-repeat;
+    margin-bottom: -19px;
+
+    h1 {
+        font-size: 45px;
+        font-family: var(--font-Helvetica);
+        margin-bottom: 20px;
+    }
+
+    p {
+        font-family: var(--font-Poppins-regular);
+        font-size: large;
+        font-weight: 100;
+        width: 50dvw;
+        color: var(--font-color-dimmed);
+
+        span {
+            font-family: 'Ethnocentric';
+            color: var(--font-color-red)
+        }
+    }
+}
+
+.footer {
+    background: linear-gradient(to bottom, #E8513D 0%, #EA3213 20%);
+    border-radius: 10px 10px 0px 0px;
+    padding: 5% 5% 0% 5%;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    // box-shadow: 0px -15px 45px #ef2957bc;
+    display: flex;
+    flex-direction: column;
+
+
+    .topDiv {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-bottom: 2%;
+    }
+
+    .socialsDiv {
+        margin-top: 30px;
+        margin-right: -30px;
+    }
+
+    .socials {
+        padding-right: 20px;
+    }
+
+    .titleLinksFooter {
+        a {
+            font-family: var(--font-vobca);
+            padding: 10px;
+            color: var(--font-color-dark)
+        }
+    }
+
+
+    .contactus {
+        display: flex;
+        flex-direction: column;
+
+        h2 {
+            color: var(--font-color-dark);
+            margin-bottom: 10px;
+        }
+
+        a {
+            color: var(--font-color-dark);
+            font-family: var(--font-Vobca-Regular);
+            cursor: pointer;
+            font-size: large;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            // span {
+            //     display: flex;
+            //     align-items: center;
+            //     justify-content: center;
+
+            img {
+                margin-right: 10px;
+            }
+
+            // }
+
+        }
+    }
+
+    .bottomDiv {
+        align-self: center;
+        margin-bottom: 20px;
+        .copyright {
+            color: #87190b;
+            font-size: 13px;
+            font-family: var(--font-Poppins-regular);
+            
+        }
+    }
+
+
   
+
 }
