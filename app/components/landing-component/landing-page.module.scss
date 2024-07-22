@@ -359,6 +359,7 @@
         align-items: center;
         margin: 10px;
         margin-top: 60px;
+        height: fit-content;
 
         .gridDiv {
             display: flex;
@@ -399,7 +400,7 @@
         padding-bottom: 200px;
         padding-top: 50px;
         margin-bottom: 10px;
-        padding-bottom: 750px;
+        // padding-bottom: 750px;
 
         h1 {
             font-size: 35px;
@@ -410,7 +411,6 @@
             flex-direction: column;
             //todo change width setting
             width: 95%;
-            height: 200px;
             align-self: center;
 
 
@@ -418,6 +418,7 @@
                 padding: 30px 40px;
                 width: 95%;
                 margin-bottom: 20px;
+                height: 250px;
 
                 .imageTextDiv {
                     justify-content: center;
