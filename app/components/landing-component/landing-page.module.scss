@@ -139,7 +139,7 @@
     background-color: var(--background-color-dark2);
     border-radius: 25px 25px 0px 0px;
     padding: 5%;
-    height: 90dvh;
+    height: max-content;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -153,6 +153,7 @@
     .homeQuote {
         display: flex;
         flex-direction: column;
+        margin-bottom: 7%;
     }
 
 
@@ -205,7 +206,7 @@
     .ps5Main2 {
         position: absolute;
         left: 400px;
-        bottom: 45dvh;
+        bottom: 400px;
         overflow: hidden;
         filter: drop-shadow(0 0 5px rgba(225, 225, 225, 0.703));
     }
@@ -213,10 +214,11 @@
     @media (max-width: 576px) {
         background-position: 100px -300px;
         // margin-top: 70px;
+        background-image: none;
         justify-content: space-between;
 
         h1 {
-            font-size: 50px;
+            font-size: 70px;
             line-height: normal;
         }
 
@@ -228,8 +230,10 @@
 
         .homeQuote {
             justify-self: flex-end;
-            margin-top: 100px;
-            
+            margin-top: 10%;
+            margin-bottom: 30%;
+
+
         }
 
         a {
@@ -237,6 +241,16 @@
             justify-self: flex-end;
             text-shadow: 0 0 20px rgba(255, 255, 255, 0.573);
 
+        }
+
+        .ps5Main {
+            left: 200px;
+            bottom: 100px;
+        }
+
+        .ps5Main2 {
+            left: 300px;
+            bottom: 400px;
         }
     }
 
@@ -257,6 +271,8 @@
 
         .homeQuote {
             justify-self: center;
+            margin-top: 20%;
+            margin-bottom: 30%;
         }
 
         a {
@@ -382,6 +398,8 @@
         margin-bottom: 10px;
         padding-bottom: 200px;
         padding-top: 50px;
+        margin-bottom: 10px;
+        padding-bottom: 750px;
 
         h1 {
             font-size: 35px;
@@ -391,12 +409,15 @@
         .mainGrid {
             flex-direction: column;
             //todo change width setting
-            width: 100%;
+            width: 95%;
+            height: 200px;
+            align-self: center;
+
 
             .gridDiv {
-                padding: 50px 70px;
-                width: 90%;
-                margin-bottom: 40px;
+                padding: 30px 40px;
+                width: 95%;
+                margin-bottom: 20px;
 
                 .imageTextDiv {
                     justify-content: center;
@@ -479,6 +500,8 @@
     @media (min-width: 992px) and (max-width: 1199px) {
         background-position: 50% -90%;
         background-size: 25%;
+        margin-bottom: 10px;
+        padding-bottom: 100px;
 
         h1 {
             font-size: 35px;
@@ -494,6 +517,9 @@
     @media (min-width: 1200px) and (max-width: 1440px) {
         background-position: 50% -50%;
         background-size: 25%;
+        margin-bottom: 10px;
+        padding-bottom: 100px;
+
 
         .mainGrid {
             .gridDiv {
@@ -506,6 +532,8 @@
 
     @media (min-width: 1441px) {
         background-position: 50% -100%;
+        margin-bottom: 10px;
+        padding-bottom: 100px;
 
     }
 
@@ -545,6 +573,64 @@
             color: var(--font-color-red)
         }
     }
+
+    @media (max-width: 576px) {
+        background-size: 95%;
+        background-position: 50% 30%;
+        margin-bottom: 120px;
+        padding-bottom: 160px;
+        padding-top: 100px;
+
+
+        h1 {
+            align-self: center;
+        }
+
+        p {
+            align-self: center;
+            width: 80%;
+            text-align: justify;
+        }
+    }
+
+    @media (min-width: 576px) and (max-width: 767px) {
+        background-size: 70%;
+        background-position: 50% 30%;
+        margin-bottom: 90px;
+        padding-bottom: 160px;
+        padding-top: 100px;
+
+        h1 {
+            align-self: center;
+        }
+
+        p {
+            align-self: center;
+            width: 80%;
+        }
+    }
+
+    @media (min-width: 768px) and (max-width: 991px) {
+        background-size: 50%;
+        background-position: 80% 30%;
+        margin-bottom: 90px;
+
+    }
+
+    @media (min-width: 992px) and (max-width: 1199px) {
+        background-size: 45%;
+        background-position: 80% 30%;
+    }
+
+    @media (min-width: 1200px) and (max-width: 1440px) {
+        background-size: 45%;
+        background-position: 80% 30%;
+    }
+
+    // @media (min-width: 1441px){
+
+    // }
+
 }
 
 .footer {
@@ -641,5 +727,35 @@
 
 
 
+    @media (max-width: 576px) {
+        .titleLinksFooter {
+            display: none;
+        }
+    }
+
+    @media (min-width: 576px) and (max-width: 767px) {
+        .titleLinksFooter {
+            display: none;
+        }
+    }
+
+    @media (min-width: 768px) and (max-width: 991px) {
+        .titleLinksFooter {
+            display: none;
+        }
+
+    }
+
+    @media (min-width: 992px) and (max-width: 1199px) {
+     
+    }
+
+    @media (min-width: 1200px) and (max-width: 1440px) {
+       
+    }
+
+    // @media (min-width: 1441px){
+
+    // }
 
 }
