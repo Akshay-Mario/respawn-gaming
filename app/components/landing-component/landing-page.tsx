@@ -255,8 +255,8 @@ export default function LandingPage() {
                 >
                     <div className={styles.topDiv}>
                         <div>
-                            <Image className={styles.ps5Main2}
-                                width={180}
+                            <Image className={styles.respawnD}
+                                // width={180}
                                 // style={{
                                 //     zIndex: 0,
                                 //     // transform: `translateY(${offsetY * 0.07}px)` 
