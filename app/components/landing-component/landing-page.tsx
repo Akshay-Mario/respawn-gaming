@@ -254,7 +254,7 @@ export default function LandingPage() {
                     }}
                 >
                     <div className={styles.topDiv}>
-                        <div>
+                        <div className={styles.socialLogoDiv}>
                             <Image className={styles.respawnD}
                                 // width={180}
                                 // style={{
@@ -307,7 +307,7 @@ export default function LandingPage() {
                                     src={'assets/images/mailIcon.svg'}
                                     alt={'mail to respawn gaming'}
                                 />
-                                respawngamingllp.gmail.com
+                                respawngamingllp@gmail.com
                             </a>
                             <a className={styles.direction} href="https://www.google.com/maps/dir//Tata+Consultancy+Services,+Infopark+E,+Kakkanad,+Kerala" target="_blank" >
                                 <Image
