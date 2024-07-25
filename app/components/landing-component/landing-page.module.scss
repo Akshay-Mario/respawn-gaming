@@ -2,7 +2,7 @@
     position: fixed;
     z-index: 10;
     background-color: var(--background-color-dark1);
-    padding: 10px 20px;
+    padding: 5px 20px;
     display: flex;
     flex-direction: column;
     width: 100dvw;
@@ -447,6 +447,7 @@
 
 
     h1 {
+        padding-top: 30px;
         font-size: 45px;
         font-family: var(--font-Helvetica);
 
@@ -497,7 +498,7 @@
         background-position: 300% 40%;
         background-size: 90%;
         margin-bottom: 10px;
-        padding-bottom: 200px;
+        padding-bottom: 80px;
         padding-top: 50px;
         margin-bottom: -10px;
         // padding-bottom: 750px;
@@ -536,7 +537,7 @@
         background-position: 150% 40%;
         background-size: 60%;
         // margin-bottom: 10px;
-        padding-bottom: 200px;
+        padding-bottom: 70px;
 
         h1 {
             font-size: 35px;
