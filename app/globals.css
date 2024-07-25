@@ -19,6 +19,7 @@
   --font-color-light: #F7F7F7;
   --font-color-dark: #2B2B2B; 
   --font-color-red: #E82E25;
+  --transition-ease-in: cubic-bezier(.6,0,.4,1);
 
 
 

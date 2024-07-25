@@ -1,4 +1,4 @@
-import { Anchor, Button, Container, Group, Image, Paper, Text, Title } from "@mantine/core";
+import { Anchor, Button, Container, Group, Image, Paper, Text, Title, Transition } from "@mantine/core";
 import styles from './landing-page.module.scss'
 import { useEffect, useState } from "react";
 
@@ -6,7 +6,6 @@ import { useEffect, useState } from "react";
 export default function LandingPage() {
 
     const [menuOverlayToggle, setmenuOverlayToggle] = useState(false)
-    const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
     // const [offsetY, setOffsetY] = useState(0);
 
     // const handleScroll = () => {
@@ -74,7 +73,6 @@ export default function LandingPage() {
     ]
 
     const toggleNavbarMobile = () => {
-        setIsMobileNavOpen(!isMobileNavOpen);
         setmenuOverlayToggle(!menuOverlayToggle);
     }
 
@@ -123,37 +121,37 @@ export default function LandingPage() {
                         onClick={toggleNavbarMobile}
                         aria-label="Toggle navigation"
                     >
-                        <div className={`${styles.navIcon4} ${isMobileNavOpen  ? styles.open : '' }`}>
+                        <div className={`${styles.navIcon4} ${menuOverlayToggle ? styles.open : ''}`}>
                             <span></span>
                             <span></span>
                             <span></span>
                         </div>
                     </button>
                 </div>
-                {menuOverlayToggle &&
-                    <div>
-                        <Group className={styles.titleLinksMobile}>
-                            <Anchor href="#Home" target="_blank" >
-                                Home
-                            </Anchor>
-                            <Anchor href="#Services" target="_blank" >
-                                Services
-                            </Anchor>
-                            {/* <Anchor href="#Gallery" target="_blank" >
+
+                <div>
+                    <Group className={`${styles.titleLinksMobile} ${menuOverlayToggle ? styles.open : ''}`}>
+                        <Anchor style={{}} href="#Home" target="_blank" >
+                            Home
+                        </Anchor>
+                        <Anchor href="#Services" target="_blank" >
+                            Services
+                        </Anchor>
+                        {/* <Anchor href="#Gallery" target="_blank" >
                         Gallery
                     </Anchor>
                     <Anchor href="#Pricing" target="_blank" >
                         Pricing
                     </Anchor> */}
-                            <Anchor href="#About" target="_blank" >
-                                About
-                            </Anchor>
-                            <Anchor href="#Contact" target="_blank" >
-                                Contact
-                            </Anchor>
-                        </Group>
-                    </div>
-                }
+                        <Anchor href="#About" target="_blank" >
+                            About
+                        </Anchor>
+                        <Anchor href="#Contact" target="_blank" >
+                            Contact
+                        </Anchor>
+                    </Group>
+                </div>
+
             </Paper >
 
             <Paper
@@ -186,17 +184,19 @@ export default function LandingPage() {
                 </Group>
 
             </Paper>
-            <Container className={styles.section1}
+            <Container className={`${styles.section1} ${menuOverlayToggle ? styles.section1MoveDown : ''}`}
             // style={{
             //     zIndex: 0,
             //     transform: `translateY(${offsetY * 0.3}px)`
             // }}
             >
                 <div className={styles.homeQuote}>
-                    <Title order={1}>PLAY,</Title>
-                    <Title order={1}>RELAX,</Title>
-                    <Title style={{ marginBottom: '0.2%' }} order={1}>RESPAWN.</Title>
-                    <Title order={6}>JOIN US AT <span> RESPAWN GAMING.</span></Title>
+                    <Title order={1} className={styles.order1}>PLAY,</Title>
+                    <Title order={1} className={styles.order2}>RELAX,</Title>
+                    <Title style={{ marginBottom: '0.2%' }} order={1} className={styles.order3}>RESPAWN.</Title>
+                    <Title order={6} className={styles.order4}>
+                        JOIN US AT <span>RESPAWN GAMING.</span>
+                    </Title>
                 </div>
                 <Image className={styles.ps5Main}
                     width={150}
@@ -222,7 +222,7 @@ export default function LandingPage() {
                 </Anchor>
 
             </Container>
-            <Container className={styles.section2}
+            <Container className={`${styles.section2}  ${menuOverlayToggle ? styles.section2MoveDown : ''}`}
             // style={{
             //     zIndex: 10,
             //     transform: `translateY(${offsetY * 0.2}px)`
@@ -234,7 +234,7 @@ export default function LandingPage() {
                 </div>
 
             </Container>
-            <Container className={styles.section3}
+            <Container className={`${styles.section3} ${menuOverlayToggle ? styles.section3MoveDown : ''}`}
             // style={{
             //     zIndex: 10,
             //     transform: `translateY(${offsetY * 0.1}px)`
