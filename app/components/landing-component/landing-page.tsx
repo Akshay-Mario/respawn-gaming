@@ -6,19 +6,20 @@ import { useEffect, useState } from "react";
 export default function LandingPage() {
 
     const [menuOverlayToggle, setmenuOverlayToggle] = useState(false)
-    const [offsetY, setOffsetY] = useState(0);
+    const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
+    // const [offsetY, setOffsetY] = useState(0);
 
-    const handleScroll = () => {
-        setOffsetY(window.scrollY);
-    };
+    // const handleScroll = () => {
+    //     setOffsetY(window.scrollY);
+    // };
 
-    useEffect(() => {
-        window.addEventListener('scroll', handleScroll);
+    // useEffect(() => {
+    //     window.addEventListener('scroll', handleScroll);
 
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
-    }, []);
+    //     return () => {
+    //         window.removeEventListener('scroll', handleScroll);
+    //     };
+    // }, []);
 
 
     const gridData = [
@@ -73,6 +74,7 @@ export default function LandingPage() {
     ]
 
     const toggleNavbarMobile = () => {
+        setIsMobileNavOpen(!isMobileNavOpen);
         setmenuOverlayToggle(!menuOverlayToggle);
     }
 
@@ -117,15 +119,15 @@ export default function LandingPage() {
                     />
 
                     <button
-                        className={styles.hamburger}
+                        className={`${styles.hamburger}`}
                         onClick={toggleNavbarMobile}
                         aria-label="Toggle navigation"
                     >
-                        <Image
-                            width={20}
-                            src={'assets/images/hamburger.svg'}
-                            alt={'Respawn Gaming Logo'}
-                        />
+                        <div className={`${styles.navIcon4} ${isMobileNavOpen  ? styles.open : '' }`}>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
                     </button>
                 </div>
                 {menuOverlayToggle &&
@@ -185,10 +187,10 @@ export default function LandingPage() {
 
             </Paper>
             <Container className={styles.section1}
-                style={{
-                    zIndex: 0,
-                    transform: `translateY(${offsetY * 0.3}px)`
-                }}
+            // style={{
+            //     zIndex: 0,
+            //     transform: `translateY(${offsetY * 0.3}px)`
+            // }}
             >
                 <div className={styles.homeQuote}>
                     <Title order={1}>PLAY,</Title>
@@ -196,6 +198,18 @@ export default function LandingPage() {
                     <Title style={{ marginBottom: '0.2%' }} order={1}>RESPAWN.</Title>
                     <Title order={6}>JOIN US AT <span> RESPAWN GAMING.</span></Title>
                 </div>
+                <Image className={styles.ps5Main}
+                    width={150}
+
+                    src={'assets/images/controller1.svg'}
+                    alt={'dual sensor controller ps5'}
+                />
+                <Image className={styles.ps5Main2}
+                    width={70}
+
+                    src={'assets/images/controller2.svg'}
+                    alt={'dual sensor controller ps5'}
+                />
                 <Anchor href="https://www.google.com/maps/dir//Tata+Consultancy+Services,+Infopark+E,+Kakkanad,+Kerala" target="_blank" >
                     <span>
                         <Image
@@ -206,30 +220,13 @@ export default function LandingPage() {
                         />
                     </span>Locate us on map
                 </Anchor>
-                <Image className={styles.ps5Main}
-                    width={150}
-                    style={{
-                        zIndex: 0,
-                        // transform: `translateY(-${offsetY * 0.2}px)` 
-                    }}
-                    src={'assets/images/controller1.svg'}
-                    alt={'dual sensor controller ps5'}
-                />
-                <Image className={styles.ps5Main2}
-                    width={70}
-                    style={{
-                        zIndex: 0,
-                        // transform: `translateY(${offsetY * 0.07}px)` 
-                    }}
-                    src={'assets/images/controller2.svg'}
-                    alt={'dual sensor controller ps5'}
-                />
+
             </Container>
             <Container className={styles.section2}
-                style={{
-                    zIndex: 10,
-                    transform: `translateY(${offsetY * 0.2}px)`
-                }}
+            // style={{
+            //     zIndex: 10,
+            //     transform: `translateY(${offsetY * 0.2}px)`
+            // }}
             >
                 <Title order={1}>OUR SERVICES</Title>
                 <div className={styles.mainGrid}>
@@ -238,20 +235,55 @@ export default function LandingPage() {
 
             </Container>
             <Container className={styles.section3}
-                style={{
-                    zIndex: 10,
-                    transform: `translateY(${offsetY * 0.1}px)`
-                }}
+            // style={{
+            //     zIndex: 10,
+            //     transform: `translateY(${offsetY * 0.1}px)`
+            // }}
             >
+                <div className={styles.galaxyDiv}>
+                    <Image className={styles.galaxyTriangle}
+                        width={70}
+                        style={{
+                            zIndex: 0,
+                            // transform: `translateY(${offsetY * 0.07}px)` 
+                        }}
+                        src={'assets/images/galaxyTriangle.svg'}
+                        alt={'dual sensor controller ps5'}
+                    /> <Image className={styles.galaxyCross}
+                        width={70}
+                        style={{
+                            zIndex: 0,
+                            // transform: `translateY(${offsetY * 0.07}px)` 
+                        }}
+                        src={'assets/images/galaxyCross.svg'}
+                        alt={'dual sensor controller ps5'}
+                    /> <Image className={styles.galaxyCircle}
+                        width={70}
+                        style={{
+                            zIndex: 0,
+                            // transform: `translateY(${offsetY * 0.07}px)` 
+                        }}
+                        src={'assets/images/galaxyCircle.svg'}
+                        alt={'dual sensor controller ps5'}
+                    /> <Image className={styles.galaxySquare}
+                        width={70}
+                        style={{
+                            zIndex: 0,
+                            // transform: `translateY(${offsetY * 0.07}px)` 
+                        }}
+                        src={'assets/images/galaxySquare.svg'}
+                        alt={'dual sensor controller ps5'}
+                    />
+                </div>
                 <Title order={1}>ABOUT US</Title>
                 <Text>At <span>RESPAWN GAMING</span>, we are dedicated to providing the best gaming experience. Whether you’re a fan of the latest PS5 games or nostalgic for retro classics, we have something for everyone. Our cozy lounge is the perfect place to relax and play.</Text>
             </Container>
             <footer>
                 <Container className={styles.footer}
-                    style={{
-                        zIndex: 10,
-                        transform: `translateY(${offsetY * 0}px)`
-                    }}
+                // style={{
+                //     zIndex: 10,
+                //     transform: `translateY(${offsetY * 0}px)`
+                // }}
                 >
                     <div className={styles.topDiv}>
                         <div className={styles.socialLogoDiv}>

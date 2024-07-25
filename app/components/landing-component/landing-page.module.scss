@@ -1,9 +1,14 @@
 .titleNavMobile {
+    position: fixed;
+    z-index: 10;
     background-color: var(--background-color-dark1);
-    padding: 20px;
+    padding: 10px 20px;
     display: flex;
     flex-direction: column;
     width: 100dvw;
+    background-color: var(--background-color-darker);
+    border-bottom: 0.5px solid #2e2e2e;
+
     // position: fixed;
     // top: 0;
     // left: 0;
@@ -30,6 +35,82 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        background-color: transparent;
+
+    }
+
+    .navIcon4 {
+        width: 30px;
+        height: 40px;
+        position: relative;
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+        -webkit-transition: .5s ease-in-out;
+        -moz-transition: .5s ease-in-out;
+        -o-transition: .5s ease-in-out;
+        transition: .5s ease-in-out;
+        cursor: pointer;
+
+        span {
+            display: block;
+            position: absolute;
+            height: 2.5px;
+            width: 90%;
+            background: #d2d2d2;
+            border-radius: 9px;
+            opacity: 1;
+            left: 0;
+            -webkit-transform: rotate(0deg);
+            -moz-transform: rotate(0deg);
+            -o-transform: rotate(0deg);
+            transform: rotate(0deg);
+            -webkit-transition: .25s ease-in-out;
+            -moz-transition: .25s ease-in-out;
+            -o-transition: .25s ease-in-out;
+            transition: .25s ease-in-out;
+
+            &:nth-child(1) {
+                top: 10px;
+                transform-origin: left center;
+            }
+
+            &:nth-child(2) {
+                top: 18px;
+                transform-origin: left center;
+            }
+
+            &:nth-child(3) {
+                width: 50%;
+                top: 26px;
+                transform-origin: left center;
+            }
+        }
+
+        &.open {
+            background-color: transparent;
+            span {
+                
+                &:nth-child(1) {
+                    transform: rotate(45deg);
+                    top: 8px;
+                    left: 5px;
+                  }
+            
+                  &:nth-child(2) {
+                    width: 0%;
+                    opacity: 0;
+                  }
+            
+                  &:nth-child(3) {
+                    transform: rotate(-45deg);
+                    width: 100%;
+                    top: 28px;
+                    left: 4px;
+                  }
+            }
+        }
 
     }
 
@@ -61,6 +142,7 @@
     align-items: center;
     width: 87dvw;
 
+
     a {
         // padding: 0 10px;
         padding-bottom: 30px;
@@ -88,6 +170,7 @@
     background-color: var(--background-color-darker);
     // box-shadow: 0px 10px 15px #295eeff1;
     z-index: 5;
+    border-bottom: 0.5px solid #2e2e2e;
 
 
 
@@ -136,11 +219,11 @@
 
 
 .section1 {
-    background-color: var(--background-color-dark2);
-    border-radius: 25px 25px 0px 0px;
+    position: relative;
+    background-color: var(--background-color-darker);
     padding: 5%;
-    height: max-content;
-    display: flex;
+    height: fit-content;
+
     flex-direction: column;
     justify-content: space-between;
     // box-shadow: 00px 0px 20px #2ff7f085;
@@ -148,6 +231,7 @@
     background-size: 1000px;
     background-position: 700px -300px;
     background-repeat: no-repeat;
+    z-index: 0;
     // margin-bottom: -20px;
 
     .homeQuote {
@@ -161,7 +245,7 @@
         color: var(--font-color-light);
         font-size: 100px;
         line-height: 100px;
-        text-shadow: 0 0 10px rgba(255, 255, 255, 0.309);
+        text-shadow: 0 0 7px rgba(255, 255, 255, 0.309);
         z-index: 1;
     }
 
@@ -197,22 +281,24 @@
 
     .ps5Main {
         position: absolute;
-        left: 350px;
-        bottom: 30px;
+        left: 40%;
+        bottom: 20%;
         overflow: hidden;
         filter: drop-shadow(0 0 5px rgba(225, 225, 225, 0.703));
     }
 
     .ps5Main2 {
         position: absolute;
-        left: 400px;
-        bottom: 400px;
+        left: 30%;
+        bottom: 70%;
         overflow: hidden;
         filter: drop-shadow(0 0 5px rgba(225, 225, 225, 0.703));
     }
 
     @media (max-width: 576px) {
         background-position: 100px -300px;
+        margin-top: 50px;
+
         // margin-top: 70px;
         background-image: none;
         justify-content: space-between;
@@ -224,7 +310,7 @@
 
         h6 {
             font-size: 10px;
-            text-shadow: 0 0 10px rgba(255, 255, 255, 0.333);
+            // text-shadow: 0 0 10px rgba(255, 255, 255, 0.333);
 
         }
 
@@ -244,18 +330,21 @@
         }
 
         .ps5Main {
-            left: 200px;
-            bottom: 100px;
+            width: 90px;
+            left: 60%;
+            bottom: 10%;
         }
 
         .ps5Main2 {
-            left: 300px;
-            bottom: 400px;
+            width: 40px;
+            left: 50%;
+            bottom: 70%;
         }
     }
 
     @media (min-width: 576px) and (max-width: 767px) {
         background-position: 200px -300px;
+        margin-top: 50px;
 
         // margin-top: 70px;
         h1 {
@@ -265,7 +354,7 @@
 
         h6 {
             font-size: 10px;
-            text-shadow: 0 0 10px rgba(255, 255, 255, 0.337);
+            // text-shadow: 0 0 10px rgba(255, 255, 255, 0.337);
 
         }
 
@@ -287,6 +376,15 @@
     @media (min-width: 768px) and (max-width: 991px) {
         background-position: 400px -300px;
 
+        .ps5Main {
+            left: 60%;
+            bottom: 20%;
+        }
+
+        .ps5Main2 {
+            left: 50%;
+            bottom: 70%;
+        }
 
     }
 
@@ -332,6 +430,7 @@
 
 
 .section2 {
+    position: relative;
     background-color: var(--background-color-dark);
     border-radius: 25px 25px 0px 0px;
     padding: 5%;
@@ -344,7 +443,8 @@
     background-size: 20%;
     background-position: 50% -100%;
     background-repeat: no-repeat;
-    margin-bottom: 90px;
+    margin-bottom: -15px;
+
 
     h1 {
         font-size: 45px;
@@ -399,7 +499,7 @@
         margin-bottom: 10px;
         padding-bottom: 200px;
         padding-top: 50px;
-        margin-bottom: 10px;
+        margin-bottom: -10px;
         // padding-bottom: 750px;
 
         h1 {
@@ -435,7 +535,7 @@
     @media (min-width: 576px) and (max-width: 767px) {
         background-position: 150% 40%;
         background-size: 60%;
-        margin-bottom: 10px;
+        // margin-bottom: 10px;
         padding-bottom: 200px;
 
         h1 {
@@ -468,7 +568,7 @@
     @media (min-width: 768px) and (max-width: 991px) {
         background-position: 150% 80%;
         background-size: 60%;
-        margin-bottom: 10px;
+        // margin-bottom: 10px;
         padding-bottom: 200px;
 
         h1 {
@@ -501,7 +601,7 @@
     @media (min-width: 992px) and (max-width: 1199px) {
         background-position: 50% -90%;
         background-size: 25%;
-        margin-bottom: 10px;
+        // margin-bottom: 10px;
         padding-bottom: 100px;
 
         h1 {
@@ -518,7 +618,7 @@
     @media (min-width: 1200px) and (max-width: 1440px) {
         background-position: 50% -50%;
         background-size: 25%;
-        margin-bottom: 10px;
+        // margin-bottom: 10px;
         padding-bottom: 100px;
 
 
@@ -533,7 +633,7 @@
 
     @media (min-width: 1441px) {
         background-position: 50% -100%;
-        margin-bottom: 10px;
+        // margin-bottom: 10px;
         padding-bottom: 100px;
 
     }
@@ -542,6 +642,7 @@
 
 
 .section3 {
+    position: relative;
     background-color: var(--background-color-darker);
     border-radius: 25px 25px 0px 0px;
     padding: 12% 10%;
@@ -550,16 +651,59 @@
     flex-direction: column;
     justify-content: space-between;
     box-shadow: 0px -15px 45px #ef2957bc;
-    background-image: url('../../../public/assets/images/sonyGalaxy.svg');
-    background-size: 45%;
-    background-position: 80% -90%;
+    // background-image: url('../../../public/assets/images/sonyGalaxy.svg');
+    // background-size: 45%;
+    // background-position: 80% -90%;
     background-repeat: no-repeat;
-    margin-bottom: 90px;
+    margin-bottom: 0px;
+
+    .galaxyDiv {
+        position: relative;
+        top: -175px;
+        right: -500px;
+        width: min-content;
+        // overflow: hidden;
+    }
+
+    img {
+        position: absolute;
+        z-index: 0;
+    }
+
+    .galaxyTriangle {
+        width: 550px;
+        // top: 0px;
+        left: -10px;
+        animation: rotate 45s linear infinite;
+    }
+
+    .galaxyCross {
+        width: 330px;
+        top: 102px;
+        left: 99px;
+        animation: rotateReverse 35s linear infinite;
+    }
+
+    .galaxyCircle {
+        width: 410px;
+        top: 60px;
+        left: 225px;
+        animation: rotate 45s linear infinite;
+    }
+
+    .galaxySquare {
+        width: 280px;
+        top: 125px;
+        left: 290px;
+        animation: rotateReverse 35s linear infinite;
+    }
+
 
     h1 {
         font-size: 45px;
         font-family: var(--font-Helvetica);
         margin-bottom: 20px;
+        z-index: 1;
     }
 
     p {
@@ -568,6 +712,8 @@
         font-weight: 100;
         width: 50dvw;
         color: var(--font-color-dimmed);
+        z-index: 1;
+
 
         span {
             font-family: 'Ethnocentric';
@@ -578,9 +724,14 @@
     @media (max-width: 576px) {
         background-size: 95%;
         background-position: 50% 30%;
-        margin-bottom: 120px;
+        // margin-bottom: 120px;
         padding-bottom: 160px;
         padding-top: 100px;
+        background-image: url('../../../public/assets/images/sonyGalaxy.svg');
+
+        .galaxyDiv {
+            display: none;
+        }
 
 
         h1 {
@@ -597,9 +748,15 @@
     @media (min-width: 576px) and (max-width: 767px) {
         background-size: 70%;
         background-position: 50% 30%;
-        margin-bottom: 90px;
+        // margin-bottom: 90px;
         padding-bottom: 160px;
         padding-top: 100px;
+        background-image: url('../../../public/assets/images/sonyGalaxy.svg');
+
+
+        .galaxyDiv {
+            display: none;
+        }
 
         h1 {
             align-self: center;
@@ -614,23 +771,41 @@
     @media (min-width: 768px) and (max-width: 991px) {
         background-size: 50%;
         background-position: 80% 30%;
-        margin-bottom: 90px;
+        // margin-bottom: 90px;
+        background-image: url('../../../public/assets/images/sonyGalaxy.svg');
+
+
+        .galaxyDiv {
+            display: none;
+        }
 
     }
 
     @media (min-width: 992px) and (max-width: 1199px) {
+        background-image: url('../../../public/assets/images/sonyGalaxy.svg');
         background-size: 45%;
         background-position: 80% 30%;
+
+        .galaxyDiv {
+            display: none;
+        }
     }
 
     @media (min-width: 1200px) and (max-width: 1440px) {
-        background-size: 45%;
-        background-position: 80% 30%;
+        .galaxyDiv {
+            position: relative;
+            top: -175px;
+            right: -500px;
+        }
     }
 
-    // @media (min-width: 1441px){
-
-    // }
+    @media (min-width: 1441px) {
+        .galaxyDiv {
+            position: relative;
+            top: -175px;
+            right: -700px;
+        }
+    }
 
 }
 
@@ -728,7 +903,7 @@
 
 
 
-    @media  (max-width: 767px)  {
+    @media (max-width: 767px) {
 
         .topDiv {
             flex-direction: column;
@@ -751,6 +926,7 @@
             align-items: center;
             justify-content: center;
             margin-bottom: 10%;
+
             .respawnD {
                 width: 60%;
                 margin-top: 20px;
@@ -761,8 +937,8 @@
                 flex-direction: row;
                 width: 70%;
                 align-items: center;
-            justify-content: space-evenly;
-            margin-right: 0%;
+                justify-content: space-evenly;
+                margin-right: 0%;
 
                 .socials {
                     width: 12%;
@@ -791,9 +967,11 @@
         .contactus {
             align-items: center;
             width: 100%;
+
             h2 {
                 margin-bottom: 5px;
             }
+
             a {
                 font-size: 110%;
             }
@@ -852,4 +1030,24 @@
 
     // }
 
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotateReverse {
+    from {
+        transform: rotate(360deg);
+    }
+
+    to {
+        transform: rotate(0deg);
+    }
 }

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1603 1603">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        filter: url(#outer-glow-1);
+        stroke: #777;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-2 {
+        fill: #777;
+        stroke-width: 0px;
+      }
+    </style>
+    <filter id="outer-glow-1" filterUnits="userSpaceOnUse">
+      <feOffset dx="0" dy="0"/>
+      <feGaussianBlur result="blur" stdDeviation="10"/>
+      <feFlood flood-color="#db4921" flood-opacity=".11"/>
+      <feComposite in2="blur" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <circle class="cls-1" cx="801.5" cy="801.5" r="801"/>
+  <polygon class="cls-2" points="132.28 271.2 174.47 365.16 234.75 281.64 132.28 271.2"/>
+</svg>
