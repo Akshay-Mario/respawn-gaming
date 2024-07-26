@@ -1,6 +1,6 @@
 import { Anchor, Button, Container, Group, Image, Paper, Text, Title, Transition } from "@mantine/core";
 import styles from './landing-page.module.scss'
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 
 export default function LandingPage() {
@@ -20,6 +20,24 @@ export default function LandingPage() {
     //     };
     // }, []);
 
+
+    const homeRef = useRef(null);
+    const servicesRef = useRef(null);
+    const aboutRef = useRef(null);
+    const contactRef = useRef(null);
+
+
+    const scrollToSection = (ref: any, offset = 60) => (event: any) => {
+        event.preventDefault();
+        if (ref.current) {
+          const top = ref.current.getBoundingClientRect().top + window.pageYOffset - offset;
+          window.scrollTo({
+            top,
+            behavior: 'smooth',
+          });
+        }
+        setmenuOverlayToggle(false);
+      };
 
     const gridData = [
         {
@@ -105,6 +123,28 @@ export default function LandingPage() {
         );
     })
 
+    const titleLinks = (
+        <>
+            <Anchor href="#homes" onClick={scrollToSection(homeRef)} style={{}} target="_blank" >
+                Home
+            </Anchor>
+            <Anchor href="#Services" onClick={scrollToSection(servicesRef)} target="_blank" >
+                Services
+            </Anchor>
+            {/* <Anchor href="#Gallery" target="_blank" >
+                        Gallery
+                    </Anchor>
+                    <Anchor href="#Pricing" target="_blank" >
+                        Pricing
+                    </Anchor> */}
+            <Anchor href="#About" onClick={scrollToSection(aboutRef)} target="_blank" >
+                About
+            </Anchor>
+            <Anchor href="#Contact" onClick={scrollToSection(contactRef)} target="_blank" >
+                Contact
+            </Anchor>
+        </>
+        )
 
     return (
         <>
@@ -131,24 +171,7 @@ export default function LandingPage() {
 
                 <div>
                     <Group className={`${styles.titleLinksMobile} ${menuOverlayToggle ? styles.open : ''}`}>
-                        <Anchor style={{}} href="#Home" target="_blank" >
-                            Home
-                        </Anchor>
-                        <Anchor href="#Services" target="_blank" >
-                            Services
-                        </Anchor>
-                        {/* <Anchor href="#Gallery" target="_blank" >
-                        Gallery
-                    </Anchor>
-                    <Anchor href="#Pricing" target="_blank" >
-                        Pricing
-                    </Anchor> */}
-                        <Anchor href="#About" target="_blank" >
-                            About
-                        </Anchor>
-                        <Anchor href="#Contact" target="_blank" >
-                            Contact
-                        </Anchor>
+                        {titleLinks}
                     </Group>
                 </div>
 
@@ -163,28 +186,11 @@ export default function LandingPage() {
                 />
 
                 <Group className={styles.titleLinks}>
-                    <Anchor href="#Home" target="_blank" >
-                        Home
-                    </Anchor>
-                    <Anchor href="#Services" target="_blank" >
-                        Services
-                    </Anchor>
-                    {/* <Anchor href="#Gallery" target="_blank" >
-                        Gallery
-                    </Anchor>
-                    <Anchor href="#Pricing" target="_blank" >
-                        Pricing
-                    </Anchor> */}
-                    <Anchor href="#About" target="_blank" >
-                        About
-                    </Anchor>
-                    <Anchor href="#Contact" target="_blank" >
-                        Contact
-                    </Anchor>
+                   {titleLinks}
                 </Group>
 
             </Paper>
-            <Container className={`${styles.section1} ${menuOverlayToggle ? styles.section1MoveDown : ''}`}
+            <Container ref={homeRef} className={`${styles.section1} ${menuOverlayToggle ? styles.section1MoveDown : ''}`}
             // style={{
             //     zIndex: 0,
             //     transform: `translateY(${offsetY * 0.3}px)`
@@ -222,7 +228,7 @@ export default function LandingPage() {
                 </Anchor>
 
             </Container>
-            <Container className={`${styles.section2}  ${menuOverlayToggle ? styles.section2MoveDown : ''}`}
+            <Container ref={servicesRef} className={`${styles.section2}  ${menuOverlayToggle ? styles.section2MoveDown : ''}`}
             // style={{
             //     zIndex: 10,
             //     transform: `translateY(${offsetY * 0.2}px)`
@@ -234,7 +240,7 @@ export default function LandingPage() {
                 </div>
 
             </Container>
-            <Container className={`${styles.section3} ${menuOverlayToggle ? styles.section3MoveDown : ''}`}
+            <Container ref={aboutRef} className={`${styles.section3} ${menuOverlayToggle ? styles.section3MoveDown : ''}`}
             // style={{
             //     zIndex: 10,
             //     transform: `translateY(${offsetY * 0.1}px)`
@@ -279,7 +285,7 @@ export default function LandingPage() {
                 <Text>At <span>RESPAWN GAMING</span>, we are dedicated to providing the best gaming experience. Whether you’re a fan of the latest PS5 games or nostalgic for retro classics, we have something for everyone. Our cozy lounge is the perfect place to relax and play.</Text>
             </Container>
             <footer>
-                <Container className={styles.footer}
+                <Container ref={contactRef} className={styles.footer}
                 // style={{
                 //     zIndex: 10,
                 //     transform: `translateY(${offsetY * 0}px)`
