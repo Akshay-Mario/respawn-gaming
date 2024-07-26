@@ -124,19 +124,19 @@ export default function LandingPage() {
                 />
                 <Title style={{ textAlign: 'center' }} order={3}>{'RETRO GAMES'}</Title>
             </div>
-            <Text className={styles.textDescription} >Dive into the cutting-edge world of PS5 gaming. Enjoy breathtaking visuals and lightning-fast performance in our state-of-the-art lounge.</Text>
+            <Text className={styles.textDescription} >Take a trip down memory lane with our collection of retro games. From classic arcade machines to beloved console titles, we have it all.</Text>
         </div>
         <div ref={stayTuned} key={3} className={`${styles.gridDiv} ${stayTunedIsVisible ? styles.animationslideUP : ''}`}>
             <div className={styles.imageTextDiv}>
                 <Image
                     src={'assets/images/stayTuned.svg'}
-                    alt={'PS5 GAMING'}
+                    alt={'STAY TUNED'}
                     width={32}
                     height={32}
                 />
-                <Title style={{ textAlign: 'center' }} order={3}>{'PS5 GAMING'}</Title>
+                <Title style={{ textAlign: 'center' }} order={3}>{'STAY TUNED'}</Title>
             </div>
-            <Text className={styles.textDescription} >Dive into the cutting-edge world of PS5 gaming. Enjoy breathtaking visuals and lightning-fast performance in our state-of-the-art lounge.</Text>
+            <Text className={styles.textDescription} >Stay tuned for exciting new services coming your way. We’re always looking to expand and enhance your gaming experience.</Text>
         </div>
     </>
     );
