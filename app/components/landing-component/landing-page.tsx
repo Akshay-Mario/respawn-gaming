@@ -1,25 +1,15 @@
 import { Anchor, Button, Container, Group, Image, Paper, Text, Title, Transition } from "@mantine/core";
 import styles from './landing-page.module.scss'
 import { useEffect, useRef, useState } from "react";
+import { useInView } from "react-intersection-observer";
 
 
 export default function LandingPage() {
 
-    const [menuOverlayToggle, setmenuOverlayToggle] = useState(false)
-    // const [offsetY, setOffsetY] = useState(0);
-
-    // const handleScroll = () => {
-    //     setOffsetY(window.scrollY);
-    // };
-
-    // useEffect(() => {
-    //     window.addEventListener('scroll', handleScroll);
-
-    //     return () => {
-    //         window.removeEventListener('scroll', handleScroll);
-    //     };
-    // }, []);
-
+    const [menuOverlayToggle, setmenuOverlayToggle] = useState(false);
+    const { ref: ps5, inView: ps5IsVisible } = useInView({triggerOnce: true});
+    const { ref: retroGames, inView: retroGamesIsVisible } = useInView({triggerOnce: true});
+    const { ref: stayTuned, inView: stayTunedIsVisible } = useInView({triggerOnce: true});
 
     const homeRef = useRef(null);
     const servicesRef = useRef(null);
@@ -30,14 +20,14 @@ export default function LandingPage() {
     const scrollToSection = (ref: any, offset = 60) => (event: any) => {
         event.preventDefault();
         if (ref.current) {
-          const top = ref.current.getBoundingClientRect().top + window.pageYOffset - offset;
-          window.scrollTo({
-            top,
-            behavior: 'smooth',
-          });
+            const top = ref.current.getBoundingClientRect().top + window.pageYOffset - offset;
+            window.scrollTo({
+                top,
+                behavior: 'smooth',
+            });
         }
         setmenuOverlayToggle(false);
-      };
+    };
 
     const gridData = [
         {
@@ -94,22 +84,61 @@ export default function LandingPage() {
         setmenuOverlayToggle(!menuOverlayToggle);
     }
 
-    const gridDetails = gridData.map((item, index) => {
-        // console.log("index :",index)
-        return (
-            <div key={index} className={styles.gridDiv}>
-                <div className={styles.imageTextDiv}>
-                    <Image
-                        src={item.svg}
-                        alt={item.title}
-                        width={32}
-                        height={32}
-                    />
-                    <Title style={{ textAlign: 'center' }} order={3}>{item.title}</Title>
-                </div>
-                <Text className={styles.textDescription} >{item.subText}</Text>
-            </div>)
-    }
+    // const gridDetails = gridData.map((item, index) => {
+    //     // console.log("index :",index)
+    //     return (
+    //         <div key={index} className={styles.gridDiv}>
+    //             <div className={styles.imageTextDiv}>
+    //                 <Image
+    //                     src={item.svg}
+    //                     alt={item.title}
+    //                     width={32}
+    //                     height={32}
+    //                 />
+    //                 <Title style={{ textAlign: 'center' }} order={3}>{item.title}</Title>
+    //             </div>
+    //             <Text className={styles.textDescription} >{item.subText}</Text>
+    //         </div>)
+    // });
+
+    const gridDetails = (<>
+        <div ref={ps5} key={1} className={`${styles.gridDiv} ${ps5IsVisible ? styles.animationslideUP : ''}`} >
+            <div className={styles.imageTextDiv}>
+                <Image
+                    src={'assets/images/psLogo.svg'}
+                    alt={'PS5 GAMING'}
+                    width={32}
+                    height={32}
+                />
+                <Title style={{ textAlign: 'center' }} order={3}>{'PS5 GAMING'}</Title>
+            </div>
+            <Text className={styles.textDescription} >Dive into the cutting-edge world of PS5 gaming. Enjoy breathtaking visuals and lightning-fast performance in our state-of-the-art lounge.</Text>
+        </div>
+        <div ref={retroGames} key={2} className={`${styles.gridDiv} ${retroGamesIsVisible ? styles.animationslideUP : ''}`} >
+            <div className={styles.imageTextDiv}>
+                <Image
+                    src={'assets/images/retroLogo.svg'}
+                    alt={'RETRO GAMES'}
+                    width={32}
+                    height={32}
+                />
+                <Title style={{ textAlign: 'center' }} order={3}>{'RETRO GAMES'}</Title>
+            </div>
+            <Text className={styles.textDescription} >Dive into the cutting-edge world of PS5 gaming. Enjoy breathtaking visuals and lightning-fast performance in our state-of-the-art lounge.</Text>
+        </div>
+        <div ref={stayTuned} key={3} className={`${styles.gridDiv} ${stayTunedIsVisible ? styles.animationslideUP : ''}`}>
+            <div className={styles.imageTextDiv}>
+                <Image
+                    src={'assets/images/stayTuned.svg'}
+                    alt={'PS5 GAMING'}
+                    width={32}
+                    height={32}
+                />
+                <Title style={{ textAlign: 'center' }} order={3}>{'PS5 GAMING'}</Title>
+            </div>
+            <Text className={styles.textDescription} >Dive into the cutting-edge world of PS5 gaming. Enjoy breathtaking visuals and lightning-fast performance in our state-of-the-art lounge.</Text>
+        </div>
+    </>
     );
 
     const socials = socialsData.map((item, index) => {
@@ -144,7 +173,7 @@ export default function LandingPage() {
                 Contact
             </Anchor>
         </>
-        )
+    )
 
     return (
         <>
@@ -186,7 +215,7 @@ export default function LandingPage() {
                 />
 
                 <Group className={styles.titleLinks}>
-                   {titleLinks}
+                    {titleLinks}
                 </Group>
 
             </Paper>

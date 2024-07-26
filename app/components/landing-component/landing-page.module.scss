@@ -541,6 +541,8 @@
             height: 300px;
             border: 1px solid #232930;
             align-items: center;
+            transform: translateY(50px);
+            opacity: 0;
 
             .imageTextDiv {
                 display: flex;
@@ -1135,4 +1137,8 @@
         transform: translateY(0px);
         opacity: 1;
     }
+}
+
+.animationslideUP {
+    animation: slideUp 0.8s var(--transition-ease-in) forwards;
 }
