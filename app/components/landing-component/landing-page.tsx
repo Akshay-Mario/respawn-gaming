@@ -2,14 +2,16 @@ import { Anchor, Button, Container, Group, Image, Paper, Text, Title, Transition
 import styles from './landing-page.module.scss'
 import { useEffect, useRef, useState } from "react";
 import { useInView } from "react-intersection-observer";
+import Particles from "../particles-component/particles";
 
 
 export default function LandingPage() {
 
     const [menuOverlayToggle, setmenuOverlayToggle] = useState(false);
-    const { ref: ps5, inView: ps5IsVisible } = useInView({triggerOnce: true});
-    const { ref: retroGames, inView: retroGamesIsVisible } = useInView({triggerOnce: true});
-    const { ref: stayTuned, inView: stayTunedIsVisible } = useInView({triggerOnce: true});
+    const { ref: ps5, inView: ps5IsVisible } = useInView({ triggerOnce: true });
+    const { ref: retroGames, inView: retroGamesIsVisible } = useInView({ triggerOnce: true });
+    const { ref: stayTuned, inView: stayTunedIsVisible } = useInView({ triggerOnce: true });
+    const { ref: aboutText, inView: aboutTextIsVisible } = useInView({ triggerOnce: true });
 
     const homeRef = useRef(null);
     const servicesRef = useRef(null);
@@ -245,6 +247,14 @@ export default function LandingPage() {
                     src={'assets/images/controller2.svg'}
                     alt={'dual sensor controller ps5'}
                 />
+                <div className={styles.backgroundCircle}></div>
+                 <Particles
+                    className={styles.particlesContainer}
+                    quantity={100}
+                    ease={80}
+                    color={'#dadada'}
+                    refresh
+                />
                 <Anchor href="https://www.google.com/maps/dir//Tata+Consultancy+Services,+Infopark+E,+Kakkanad,+Kerala" target="_blank" >
                     <span>
                         <Image
@@ -255,7 +265,6 @@ export default function LandingPage() {
                         />
                     </span>Locate us on map
                 </Anchor>
-
             </Container>
             <Container ref={servicesRef} className={`${styles.section2}  ${menuOverlayToggle ? styles.section2MoveDown : ''}`}
             // style={{
@@ -311,7 +320,7 @@ export default function LandingPage() {
                     />
                 </div>
                 <Title order={1}>ABOUT US</Title>
-                <Text>At <span>RESPAWN GAMING</span>, we are dedicated to providing the best gaming experience. Whether you’re a fan of the latest PS5 games or nostalgic for retro classics, we have something for everyone. Our cozy lounge is the perfect place to relax and play.</Text>
+                <Text ref={aboutText} className={`${aboutTextIsVisible ? styles.animationslideUP : ''}`} >At <span> RESPAWN GAMING</span>, we are dedicated to providing the best gaming experience. Whether you’re a fan of the latest PS5 games or nostalgic for retro classics, we have something for everyone. Our cozy lounge is the perfect place to relax and play.</Text>
             </Container>
             <footer>
                 <Container ref={contactRef} className={styles.footer}

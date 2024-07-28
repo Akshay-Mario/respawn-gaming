@@ -241,7 +241,6 @@
     background-color: var(--background-color-darker);
     padding: 5%;
     height: fit-content;
-
     flex-direction: column;
     justify-content: space-between;
     // box-shadow: 00px 0px 20px #2ff7f085;
@@ -255,6 +254,7 @@
     -moz-transition: transform 0.45s var(--transition-ease-in);
     -o-transition: transform 0.45s var(--transition-ease-in);
     transition: transform 0.45s var(--transition-ease-in);
+    overflow: hidden; 
 
 
     .homeQuote {
@@ -290,6 +290,23 @@
         }
     }
 
+    .backgroundCircle {
+        position: absolute;
+        background: radial-gradient(circle, #efefef2b 0%, #efefef11 50%, #efefef00 70%);
+        width: 500px;
+        height: 500px;
+        top:-250px;
+        right: -250px;
+    }
+    .particlesContainer {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        // background-color: red;
+        // z-index: 2000 !important;
+    }
 
 
     @keyframes fadeInUp {
@@ -361,7 +378,7 @@
 
     @media (max-width: 576px) {
         background-position: 100px -300px;
-        margin-top: 50px;
+        padding-top: 70px;
 
         // margin-top: 70px;
         background-image: none;
@@ -716,7 +733,7 @@
     position: relative;
     background-color: var(--background-color-darker);
     border-radius: 25px 25px 0px 0px;
-    padding: 12% 10%;
+    padding: 12% 5%;
     height: max-content;
     display: flex;
     flex-direction: column;
@@ -788,9 +805,12 @@
         width: 50dvw;
         color: var(--font-color-dimmed);
         z-index: 1;
+        opacity: 0;
+        transform: translateX(50px);
 
 
         span {
+            word-break: break-all;
             font-family: 'Ethnocentric';
             color: var(--font-color-red)
         }
