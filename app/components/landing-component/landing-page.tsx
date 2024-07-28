@@ -8,11 +8,10 @@ import Particles from "../particles-component/particles";
 export default function LandingPage() {
 
     const [menuOverlayToggle, setmenuOverlayToggle] = useState(false);
-    const { ref: ps5, inView: ps5IsVisible } = useInView({ delay: 400, triggerOnce: true });
-    const { ref: retroGames, inView: retroGamesIsVisible } = useInView({ triggerOnce: true, delay: 400 });
-    const { ref: stayTuned, inView: stayTunedIsVisible } = useInView({ triggerOnce: true, delay: 400 });
-    const { ref: aboutText, inView: aboutTextIsVisible } = useInView({ triggerOnce: true, delay: 400 });
-
+    const { ref: ps5, inView: ps5IsVisible } = useInView({ delay: 200, triggerOnce: true });
+    const { ref: retroGames, inView: retroGamesIsVisible } = useInView({ triggerOnce: true, delay: 200 });
+    const { ref: stayTuned, inView: stayTunedIsVisible } = useInView({ triggerOnce: true, delay: 200 });
+    const { ref: aboutText, inView: aboutTextIsVisible } = useInView({ triggerOnce: true, delay: 200 })
     const homeRef = useRef(null);
     const servicesRef = useRef(null);
     const aboutRef = useRef(null);

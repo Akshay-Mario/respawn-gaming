@@ -1,7 +1,5 @@
-"use client";
 
 import React, { useEffect, useRef, useState } from "react";
-import styles from './particles.module.scss';
 
 interface MousePosition {
   x: number;
