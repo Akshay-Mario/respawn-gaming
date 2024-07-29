@@ -128,12 +128,14 @@
         }
         .circularBack {
             position: absolute;
-            background: radial-gradient(circle, #1fecc64a 0%, #1fecc620 50%, #1fecc700 80%);
-            width: 100%;
+            background: linear-gradient(180deg, #1fecc633, transparent);
+            width: 120%;
             height: 100%;
-            // top: -150px;
-            // left: -750px;
             background-attachment: fixed;
+            top: -0px;
+            border-radius: 10px;
+            left: -10px;
+            transform: 0.45s var(--transition-ease-in);
         }
     }
 

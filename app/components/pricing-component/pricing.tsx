@@ -29,7 +29,7 @@ const Pricing: React.FC<PricingProps> = ({menuOverlayToggle}) => {
                         </div>
                     </div>
 
-                    <Button className={styles.buttonContact}>contact us</Button>
+                    <Button  onClick={() => window.open('https://wa.me/+98137861868', '_blank')} className={styles.buttonContact}>contact us</Button>
                 </div>
                 <div key={200} ref={price200} className={`${styles.gridItem} ${price200IsVisible ? styles.animationslideUP : ''}`}>
                     <div className={`${styles.topDiv} ${price200IsVisible ? styles.animationSlideLeft : ''}`}>
@@ -39,7 +39,7 @@ const Pricing: React.FC<PricingProps> = ({menuOverlayToggle}) => {
                         </div>
                     </div>
 
-                    <Button className={styles.buttonContact}>contact us</Button>
+                    <Button onClick={() => window.open('https://wa.me/+98137861868', '_blank')} className={styles.buttonContact}>contact us</Button>
                 </div>
             </div>
             <div className={styles.rowGrid}>
@@ -51,7 +51,7 @@ const Pricing: React.FC<PricingProps> = ({menuOverlayToggle}) => {
                         </div>
                     </div>
 
-                    <Button className={styles.buttonContact}>contact us</Button>
+                    <Button onClick={() => window.open('https://wa.me/+98137861868', '_blank')} className={styles.buttonContact}>contact us</Button>
                 </div>
                 <div key={500} ref={price500} className={`${styles.gridItem} ${price500IsVisible ? styles.animationslideUP : ''}`}>
                     <div className={`${styles.topDiv} ${price500IsVisible ? styles.animationSlideLeft : ''}`}>
@@ -61,7 +61,7 @@ const Pricing: React.FC<PricingProps> = ({menuOverlayToggle}) => {
                         </div>
                     </div>
 
-                    <Button className={styles.buttonContact}>contact us</Button>
+                    <Button onClick={() => window.open('https://wa.me/+98137861868', '_blank')} className={styles.buttonContact}>contact us</Button>
                 </div>
             </div>
         </Container>

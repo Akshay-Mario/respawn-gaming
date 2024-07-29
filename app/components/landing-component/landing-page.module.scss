@@ -592,10 +592,11 @@
         padding-bottom: 80px;
         padding-top: 50px;
         margin-bottom: -10px;
+
         // padding-bottom: 750px;
         .circularBack {
             position: absolute;
-            background: linear-gradient(0deg, #7c29ef5d, transparent);
+            background: linear-gradient(180deg, #7c29ef33, transparent);
             width: 130%;
             height: 130%;
             top: -0px;
@@ -603,6 +604,8 @@
             left: -10px;
             background-attachment: fixed;
             // z-index: 0;
+            transform: 0.45s var(--transition-ease-in);
+
         }
 
         h1 {
@@ -641,7 +644,7 @@
         background-size: 60%;
         // margin-bottom: 10px;
         padding-bottom: 70px;
-        
+
         .circularBack {
             position: absolute;
             background: linear-gradient(0deg, #7c29ef5d, transparent);
