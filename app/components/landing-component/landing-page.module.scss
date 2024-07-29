@@ -380,13 +380,13 @@
     @media (max-width: 576px) {
         background-position: 100px -300px;
         padding-top: 70px;
-
+        height: 70dvh;
         // margin-top: 70px;
         background-image: none;
         justify-content: space-between;
 
         h1 {
-            font-size: 70px;
+            font-size: 60px;
             line-height: normal;
         }
 
@@ -609,7 +609,7 @@
         }
 
         h1 {
-            font-size: 35px;
+            font-size: 25px;
             align-self: center;
             z-index: 10;
         }
@@ -780,6 +780,7 @@
     -moz-transition: transform 0.45s var(--transition-ease-in);
     -o-transition: transform 0.45s var(--transition-ease-in);
     transition: transform 0.45s var(--transition-ease-in);
+    overflow: hidden;
 
     .galaxyDiv {
         position: relative;
@@ -856,12 +857,28 @@
         padding-top: 100px;
         background-image: url('../../../public/assets/images/sonyGalaxy.svg');
 
+
+        .circularBack {
+            position: absolute;
+            background: linear-gradient(180deg, #ef295732, transparent);
+            width: 130%;
+            height: 130%;
+            top: -0px;
+            border-radius: 10px;
+            left: -10px;
+            background-attachment: fixed;
+            // z-index: 0;
+            transform: 0.45s var(--transition-ease-in);
+
+        }
+
         .galaxyDiv {
             display: none;
         }
 
 
         h1 {
+            font-size: 25px;
             align-self: center;
         }
 
@@ -881,6 +898,20 @@
         background-image: url('../../../public/assets/images/sonyGalaxy.svg');
 
 
+        .circularBack {
+            position: absolute;
+            background: linear-gradient(180deg, #ef29572d, transparent);
+            width: 130%;
+            height: 130%;
+            top: -0px;
+            border-radius: 10px;
+            left: -10px;
+            background-attachment: fixed;
+            // z-index: 0;
+            transform: 0.45s var(--transition-ease-in);
+
+        }
+        
         .galaxyDiv {
             display: none;
         }

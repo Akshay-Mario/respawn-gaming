@@ -18,7 +18,7 @@ const Pricing: React.FC<PricingProps> = ({menuOverlayToggle}) => {
     return (
         <Container className={`${styles.sectionPricing} ${menuOverlayToggle ? styles.sectionPricingMoveDown : ''}`}>
             <div className={styles.circularBack}></div>
-            <Title order={1}>Pricing</Title>
+            <Title order={1}>PRICING</Title>
             <Text>We offer a variety of gaming session options to suit your needs. Enjoy our top-notch gaming setups with friends or solo at affordable rates.</Text>
             <div className={styles.rowGrid}>
                 <div key={150} ref={price150} className={`${styles.gridItem} ${price150IsVisible ? styles.animationslideUP : ''}`}>

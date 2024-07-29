@@ -10,8 +10,8 @@ export default function LandingPage() {
 
     const [menuOverlayToggle, setmenuOverlayToggle] = useState(false);
     const { ref: ps5, inView: ps5IsVisible } = useInView({ delay: 200, triggerOnce: true });
-    const { ref: retroGames, inView: retroGamesIsVisible } = useInView({ triggerOnce: true, delay: 400 });
-    const { ref: stayTuned, inView: stayTunedIsVisible } = useInView({ triggerOnce: true, delay: 600 });
+    const { ref: retroGames, inView: retroGamesIsVisible } = useInView({ triggerOnce: true, delay: 200 });
+    const { ref: stayTuned, inView: stayTunedIsVisible } = useInView({ triggerOnce: true, delay: 200 });
     const { ref: aboutText, inView: aboutTextIsVisible } = useInView({ triggerOnce: true, delay: 200 })
 
     const homeRef = useRef(null);
@@ -114,9 +114,9 @@ export default function LandingPage() {
                     width={32}
                     height={32}
                 />
-                <Title style={{ textAlign: 'center' }} order={3}>{'PS5 GAMING'}</Title>
+                <Title style={{ textAlign: 'center' }} className={`${ps5IsVisible ? styles.animationslideUP : ''}`} order={3}>{'PS5 GAMING'}</Title>
             </div>
-            <Text className={styles.textDescription} >Dive into the cutting-edge world of PS5 gaming. Enjoy breathtaking visuals and lightning-fast performance in our state-of-the-art lounge.</Text>
+            <Text className={`${styles.textDescription} ${ps5IsVisible ? styles.animationslideUP : ''}`} >Dive into the cutting-edge world of PS5 gaming. Enjoy breathtaking visuals and lightning-fast performance in our state-of-the-art lounge.</Text>
         </div>
         <div ref={retroGames} key={2} className={`${styles.gridDiv} ${retroGamesIsVisible ? styles.animationslideUP : ''}`} >
             <div className={styles.imageTextDiv}>
@@ -126,9 +126,9 @@ export default function LandingPage() {
                     width={32}
                     height={32}
                 />
-                <Title style={{ textAlign: 'center' }} order={3}>{'RETRO GAMES'}</Title>
+                <Title style={{ textAlign: 'center' }} className={`${ps5IsVisible ? styles.animationslideUP : ''}`} order={3}>{'RETRO GAMES'}</Title>
             </div>
-            <Text className={styles.textDescription} >Take a trip down memory lane with our collection of retro games. From classic arcade machines to beloved console titles, we have it all.</Text>
+            <Text className={`${styles.textDescription} ${ps5IsVisible ? styles.animationslideUP : ''}`} >Take a trip down memory lane with our collection of retro games. From classic arcade machines to beloved console titles, we have it all.</Text>
         </div>
         <div ref={stayTuned} key={3} className={`${styles.gridDiv} ${stayTunedIsVisible ? styles.animationslideUP : ''}`}>
             <div className={styles.imageTextDiv}>
@@ -138,9 +138,9 @@ export default function LandingPage() {
                     width={32}
                     height={32}
                 />
-                <Title style={{ textAlign: 'center' }} order={3}>{'STAY TUNED'}</Title>
+                <Title style={{ textAlign: 'center' }} className={`${ps5IsVisible ? styles.animationslideUP : ''}`} order={3}>{'STAY TUNED'}</Title>
             </div>
-            <Text className={styles.textDescription} >Stay tuned for exciting new services coming your way. We’re always looking to expand and enhance your gaming experience.</Text>
+            <Text className={`${styles.textDescription} ${ps5IsVisible ? styles.animationslideUP : ''}`} >Stay tuned for exciting new services coming your way. We’re always looking to expand and enhance your gaming experience.</Text>
         </div>
     </>
     );
@@ -284,7 +284,7 @@ export default function LandingPage() {
 
             </Container>
             <div ref={pricingRef}>
-                <Pricing  menuOverlayToggle={menuOverlayToggle}/>
+                <Pricing menuOverlayToggle={menuOverlayToggle} />
             </div>
             <Container ref={aboutRef} className={`${styles.section3} ${menuOverlayToggle ? styles.section3MoveDown : ''}`}
             // style={{
@@ -292,6 +292,8 @@ export default function LandingPage() {
             //     transform: `translateY(${offsetY * 0.1}px)`
             // }}
             >
+                <div className={styles.circularBack}></div>
+
                 <div className={styles.galaxyDiv}>
                     <Image className={styles.galaxyTriangle}
                         width={70}
