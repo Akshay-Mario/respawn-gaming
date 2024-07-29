@@ -8,8 +8,8 @@
     width: 100dvw;
     background-color: var(--background-color-darker);
     border-bottom: 0.5px solid #2e2e2e;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(50px);
+    -webkit-backdrop-filter: blur(50px);
     // background-color: rgba(0, 0, 0, 0.239);
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.771) 0%, rgba(0, 0, 0, 0.239) 30%);
 
