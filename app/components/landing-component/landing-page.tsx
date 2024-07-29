@@ -3,19 +3,22 @@ import styles from './landing-page.module.scss'
 import { useEffect, useRef, useState } from "react";
 import { useInView } from "react-intersection-observer";
 import Particles from "../particles-component/particles";
+import Pricing from "../pricing-component/pricing";
 
 
 export default function LandingPage() {
 
     const [menuOverlayToggle, setmenuOverlayToggle] = useState(false);
     const { ref: ps5, inView: ps5IsVisible } = useInView({ delay: 200, triggerOnce: true });
-    const { ref: retroGames, inView: retroGamesIsVisible } = useInView({ triggerOnce: true, delay: 200 });
-    const { ref: stayTuned, inView: stayTunedIsVisible } = useInView({ triggerOnce: true, delay: 200 });
+    const { ref: retroGames, inView: retroGamesIsVisible } = useInView({ triggerOnce: true, delay: 400 });
+    const { ref: stayTuned, inView: stayTunedIsVisible } = useInView({ triggerOnce: true, delay: 600 });
     const { ref: aboutText, inView: aboutTextIsVisible } = useInView({ triggerOnce: true, delay: 200 })
+
     const homeRef = useRef(null);
     const servicesRef = useRef(null);
     const aboutRef = useRef(null);
     const contactRef = useRef(null);
+    const pricingRef = useRef(null);
 
 
     const scrollToSection = (ref: any, offset = 60) => (event: any) => {
@@ -167,6 +170,9 @@ export default function LandingPage() {
                     <Anchor href="#Pricing" target="_blank" >
                         Pricing
                     </Anchor> */}
+            <Anchor href="#Pricing" onClick={scrollToSection(pricingRef)} target="_blank" >
+                Pricing
+            </Anchor>
             <Anchor href="#About" onClick={scrollToSection(aboutRef)} target="_blank" >
                 About
             </Anchor>
@@ -247,11 +253,11 @@ export default function LandingPage() {
                     alt={'dual sensor controller ps5'}
                 />
                 <div className={styles.backgroundCircle}></div>
-                 <Particles
+                <Particles
                     className={styles.particlesContainer}
                     quantity={50}
                     ease={80}
-                    color={'#dadada'}
+                    color={'#ffffff'}
                 />
                 <Anchor href="https://www.google.com/maps/dir//Tata+Consultancy+Services,+Infopark+E,+Kakkanad,+Kerala" target="_blank" >
                     <span>
@@ -270,12 +276,16 @@ export default function LandingPage() {
             //     transform: `translateY(${offsetY * 0.2}px)`
             // }}
             >
+                <div className={styles.circularBack}></div>
                 <Title order={1}>OUR SERVICES</Title>
                 <div className={styles.mainGrid}>
                     {gridDetails}
                 </div>
 
             </Container>
+            <div ref={pricingRef}>
+                <Pricing  menuOverlayToggle={menuOverlayToggle}/>
+            </div>
             <Container ref={aboutRef} className={`${styles.section3} ${menuOverlayToggle ? styles.section3MoveDown : ''}`}
             // style={{
             //     zIndex: 10,

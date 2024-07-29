@@ -1,0 +1,177 @@
+.sectionPricing {
+    position: relative;
+    background-color: var(--background-color-darkerer);
+    border-radius: 25px 25px 0px 0px;
+    padding: 5%;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0px -15px 45px #29efa6f1;
+    margin-bottom: -45px;
+    -webkit-transition: transform 0.45s var(--transition-ease-in);
+    -moz-transition: transform 0.45s var(--transition-ease-in);
+    -o-transition: transform 0.45s var(--transition-ease-in);
+    transition: transform 0.45s var(--transition-ease-in);
+    overflow: hidden;
+
+
+    .topDiv {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    h1 {
+        padding-top: 30px;
+        font-size: 45px;
+        font-family: var(--font-Helvetica);
+        z-index: 10;
+
+    }
+
+    p {
+        margin-top: 15px;
+        text-align: flex-start;
+        width: 50%;
+        font-family: var(--font-Poppins);
+        font-size: small;
+        color: var(--font-color-dimmed);
+        
+    }
+
+
+
+
+    .rowGrid {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: max-content;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .textHeader {
+        width: 100%;
+    }
+
+    .price {
+        font-family: var(--font-InterExtra);
+        font-size: 50px;
+        color: white;
+        width: max-content;
+    }
+
+    .pHour {
+        padding-top: 8px;
+        margin-left: 5px;
+
+    }
+
+    .buttonContact {
+        width: 40%;
+        padding: 7px 7px;
+        border-radius: 8px;
+        border: 0px;
+        margin-bottom: 30px;
+
+        span {
+            font-size: small;
+
+            font-family: var(--font-Poppins);
+            color: black;
+        }
+    }
+
+    .gridItem {
+        background-color: var(--background-color-darker);
+        padding: 5px 20px;
+        margin: 30px;
+        border-radius: 10px;
+        width: 300px;
+        height: 220px;
+        box-shadow: 0px 0px 25px #aaaaaa3f;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        // animation: 2s boxShadowMove linear infinite;
+        opacity: 0;
+        transform: translateY(50px)
+    }
+
+
+
+    // @media (max-width: 576px) {}
+
+    @media (max-width: 767px) {
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 70px;
+        p {
+            width: 95%;
+            text-align: center;
+        }
+        .textHeader {
+            text-align: justify;
+        }
+            
+        .rowGrid {
+            flex-direction: column;
+        }
+
+        .gridItem {
+            width: 270px;
+            height: 230px;
+        }
+        .price {
+        font-size: 48px;
+        }
+        .circularBack {
+            position: absolute;
+            background: radial-gradient(circle, #1fecc64a 0%, #1fecc620 50%, #1fecc700 80%);
+            width: 100%;
+            height: 100%;
+            // top: -150px;
+            // left: -750px;
+            background-attachment: fixed;
+        }
+    }
+
+}
+
+.sectionPricingMoveDown {
+    transform: translateY(10px) scale(0.95);
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+.animationslideUP {
+    animation: slideUp 0.7s var(--transition-ease-in) forwards;
+}
+
+@keyframes slideLeft {
+    from {
+        transform: translateX(50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+
+.animationSlideLeft {
+    animation: slideLeft 0.7s var(--transition-ease-in) forwards;
+}

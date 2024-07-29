@@ -254,7 +254,7 @@
     -moz-transition: transform 0.45s var(--transition-ease-in);
     -o-transition: transform 0.45s var(--transition-ease-in);
     transition: transform 0.45s var(--transition-ease-in);
-    overflow: hidden; 
+    overflow: hidden;
 
 
     .homeQuote {
@@ -295,9 +295,10 @@
         background: radial-gradient(circle, #efefef2b 0%, #efefef11 50%, #efefef00 70%);
         width: 500px;
         height: 500px;
-        top:-250px;
+        top: -250px;
         right: -250px;
     }
+
     .particlesContainer {
         position: absolute;
         top: 0px;
@@ -512,7 +513,7 @@
 
 .section2 {
     position: relative;
-    background-color: var(--background-color-dark);
+    background-color: var(--background-color-darker);
     border-radius: 25px 25px 0px 0px;
     padding: 5%;
     height: max-content;
@@ -529,7 +530,7 @@
     -moz-transition: transform 0.45s var(--transition-ease-in);
     -o-transition: transform 0.45s var(--transition-ease-in);
     transition: transform 0.45s var(--transition-ease-in);
-
+    overflow: hidden;
 
     h1 {
         padding-top: 30px;
@@ -548,6 +549,9 @@
         height: fit-content;
 
         .gridDiv {
+            backdrop-filter: blur(1px);
+            -webkit-backdrop-filter: blur(1px);
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.375) 0%, rgba(0, 0, 0, 0.124) 10%);
             display: flex;
             flex-direction: column;
             background-color: #161b22a8;
@@ -589,10 +593,22 @@
         padding-top: 50px;
         margin-bottom: -10px;
         // padding-bottom: 750px;
+        .circularBack {
+            position: absolute;
+            background: linear-gradient(0deg, #7c29ef5d, transparent);
+            width: 130%;
+            height: 130%;
+            top: -0px;
+            border-radius: 10px;
+            left: -10px;
+            background-attachment: fixed;
+            // z-index: 0;
+        }
 
         h1 {
             font-size: 35px;
             align-self: center;
+            z-index: 10;
         }
 
         .mainGrid {
@@ -625,10 +641,23 @@
         background-size: 60%;
         // margin-bottom: 10px;
         padding-bottom: 70px;
+        
+        .circularBack {
+            position: absolute;
+            background: linear-gradient(0deg, #7c29ef5d, transparent);
+            width: 130%;
+            height: 130%;
+            top: 0px;
+            border-radius: 10px;
+            left: -10px;
+            background-attachment: fixed;
+        }
 
         h1 {
             font-size: 35px;
             align-self: center;
+            z-index: 10;
+
         }
 
         .mainGrid {
