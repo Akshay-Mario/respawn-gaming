@@ -155,7 +155,7 @@
         font-size: 25px;
         font-weight: 400;
         line-height: 1;
-        font-family: var(--font-Poppins-regular);
+        font-family: var(--font-Inter-Regular);
 
         &:hover {
             color: rgb(100, 100, 100);
@@ -189,7 +189,7 @@
         flex-direction: row;
 
         a {
-            font-family: var(--font-Poppins);
+            font-family: var(--font-Inter);
             font-weight: 100;
             font-size: small;
             padding-inline: 20px;
@@ -534,7 +534,7 @@
     h1 {
         padding-top: 30px;
         font-size: 45px;
-        font-family: var(--font-Helvetica);
+        font-family: var(--font-Inter-ExtraBold);
 
     }
 
@@ -576,7 +576,7 @@
             .textDescription {
                 margin-top: 40px;
                 text-align: center;
-                font-family: var(--font-Poppins);
+                font-family: var(--font-Inter);
                 font-size: small;
                 color: var(--font-color-dimmed);
             }
@@ -825,13 +825,13 @@
 
     h1 {
         font-size: 45px;
-        font-family: var(--font-Helvetica);
+        font-family: var(--font-Inter-ExtraBold);
         margin-bottom: 20px;
         z-index: 1;
     }
 
     p {
-        font-family: var(--font-Poppins-regular);
+        font-family: var(--font-Inter-Regular);
         font-size: large;
         font-weight: 100;
         width: 50dvw;
@@ -1053,7 +1053,7 @@
         .copyright {
             color: #87190b;
             font-size: 13px;
-            font-family: var(--font-Poppins-regular);
+            font-family: var(--font-Inter-Regular);
 
         }
     }

@@ -6,9 +6,9 @@
     "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
   --font-Vobca: 'Vobca-Black', 'Courier New', monospace, Sans-serif;
   --font-Vobca-Regular: 'Vobca-Regular', 'Courier New', monospace, Sans-serif;
-  --font-Poppins: 'Poppins-Medium', 'Courier New', monospace, Sans-serif;
-  --font-Poppins-regular: 'Poppins-Regular', 'Courier New', monospace, Sans-serif;
-  --font-Helvetica: 'Helvetica', 'Courier New', monospace, Sans-serif;
+  --font-Inter: 'Inter-Medium', 'Courier New', monospace, Sans-serif;
+  --font-Inter-Regular: 'Inter-Regular', 'Courier New', monospace, Sans-serif;
+  --font-Inter-ExtraBold: 'Inter-ExtraBold', 'Courier New', monospace, Sans-serif;
   --font-InterExtra: 'Inter-Extra', 'Courier New', monospace, Sans-serif;
   --foreground: #262626;
   --background-color-light: #F3F3F3;
@@ -132,7 +132,7 @@ a {
 
 
 @font-face {
-  font-family: 'Poppins-Medium';
+  font-family: 'Inter-Medium';
   src: url('../public/assets/fonts/Inter-Medium.ttf') format('truetype');
 }
 
@@ -142,12 +142,12 @@ a {
 }
 
 @font-face {
-  font-family: 'Helvetica';
+  font-family: 'Inter-ExtraBold';
   src: url('../public/assets/fonts/Inter-ExtraBold.ttf') format('truetype');
 }
 
 @font-face {
-  font-family: 'Poppins-Regular';
+  font-family: 'Inter-Regular';
   src: url('../public/assets/fonts/Inter-Regular.ttf') format('truetype');
 }
 
