@@ -9,10 +9,10 @@ import Pricing from "../pricing-component/pricing";
 export default function LandingPage() {
 
     const [menuOverlayToggle, setmenuOverlayToggle] = useState(false);
-    const { ref: ps5, inView: ps5IsVisible } = useInView({ delay: 200, triggerOnce: true });
-    const { ref: retroGames, inView: retroGamesIsVisible } = useInView({ triggerOnce: true, delay: 200 });
-    const { ref: stayTuned, inView: stayTunedIsVisible } = useInView({ triggerOnce: true, delay: 200 });
-    const { ref: aboutText, inView: aboutTextIsVisible } = useInView({ triggerOnce: true, delay: 200 })
+    const { ref: ps5, inView: ps5IsVisible } = useInView({ triggerOnce: true });
+    const { ref: retroGames, inView: retroGamesIsVisible } = useInView({ triggerOnce: true});
+    const { ref: stayTuned, inView: stayTunedIsVisible } = useInView({ triggerOnce: true});
+    const { ref: aboutText, inView: aboutTextIsVisible } = useInView({ triggerOnce: true})
 
     const homeRef = useRef(null);
     const servicesRef = useRef(null);
