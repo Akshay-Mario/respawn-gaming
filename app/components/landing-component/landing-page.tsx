@@ -378,13 +378,13 @@ export default function LandingPage() {
                             <Title order={2}>
                                 CONTACT US
                             </Title>
-                            <a href="tel:+918137861868" aria-label="Phone NUmber">
+                            <a href="tel:+917907856810" aria-label="Phone NUmber">
                                 <Image
                                     width={15}
                                     src={'assets/images/callIcon.svg'}
                                     alt={'call respawn gaming'}
                                 />
-                                +918137861868
+                                +917907856810
                             </a>
                             <a href="mailto:respawngamingllp@gmail.com" aria-label="Email Address">
 
