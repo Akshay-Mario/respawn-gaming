@@ -262,24 +262,24 @@
         flex-direction: column;
         margin-bottom: 7%;
 
-        h1 {
+       .order1 {
             opacity: 0;
             animation: fadeInUp 1s ease forwards;
         }
 
-        h1:nth-child(1) {
+       .order1:nth-child(1) {
             animation-delay: 0s;
         }
 
-        h1:nth-child(2) {
+       .order1:nth-child(2) {
             animation-delay: 0.3s;
         }
 
-        h1:nth-child(3) {
+       .order1:nth-child(3) {
             animation-delay: 0.6s;
         }
 
-        h6 {
+        .order4 {
             opacity: 0;
             animation: fadeInUp 1s ease forwards;
             animation-delay: 0.9s;
@@ -323,7 +323,7 @@
     }
 
 
-    h1 {
+    .order1 {
         color: var(--font-color-light);
         font-size: 100px;
         line-height: 100px;
@@ -333,7 +333,7 @@
 
 
 
-    h6 {
+    .order4 {
         font-size: 20px;
         color: var(--font-color-light);
         z-index: 1;
@@ -389,12 +389,12 @@
         background-image: none;
         justify-content: space-between;
 
-        h1 {
+        .order1 {
             font-size: 60px;
             line-height: normal;
         }
 
-        h6 {
+        .order4 {
             font-size: 10px;
             // text-shadow: 0 0 10px rgba(255, 255, 255, 0.333);
 
@@ -433,12 +433,12 @@
         margin-top: 50px;
 
         // margin-top: 70px;
-        h1 {
+        .order1 {
             font-size: 50px;
             line-height: normal;
         }
 
-        h6 {
+        .order4 {
             font-size: 10px;
             // text-shadow: 0 0 10px rgba(255, 255, 255, 0.337);
 
@@ -489,12 +489,12 @@
 
     @media (max-height: 500px) {
 
-        h1 {
+        .order1 {
             font-size: 50px;
             line-height: normal;
         }
 
-        h6 {
+        .order4 {
             font-size: 10px;
             text-shadow: 0 0 10px rgba(255, 255, 255, 0.337);
 
@@ -536,7 +536,7 @@
     transition: transform 0.45s var(--transition-ease-in);
     overflow: hidden;
 
-    h1 {
+    h2 {
         padding-top: 30px;
         font-size: 45px;
         font-family: var(--font-Inter-ExtraBold);
@@ -612,7 +612,7 @@
 
         }
 
-        h1 {
+        h2 {
             font-size: 25px;
             align-self: center;
             z-index: 10;
@@ -660,7 +660,7 @@
             background-attachment: fixed;
         }
 
-        h1 {
+        h2 {
             font-size: 35px;
             align-self: center;
             z-index: 10;
@@ -695,7 +695,7 @@
         // margin-bottom: 10px;
         padding-bottom: 200px;
 
-        h1 {
+        h2 {
             font-size: 35px;
             align-self: center;
         }
@@ -728,7 +728,7 @@
         // margin-bottom: 10px;
         padding-bottom: 100px;
 
-        h1 {
+        h2 {
             font-size: 35px;
         }
 
@@ -828,7 +828,7 @@
     }
 
 
-    h1 {
+    h2 {
         font-size: 45px;
         font-family: var(--font-Inter-ExtraBold);
         margin-bottom: 20px;
@@ -881,7 +881,7 @@
         }
 
 
-        h1 {
+        h2 {
             font-size: 25px;
             align-self: center;
         }
@@ -920,7 +920,7 @@
             display: none;
         }
 
-        h1 {
+        h2 {
             align-self: center;
         }
 

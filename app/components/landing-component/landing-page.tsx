@@ -233,12 +233,12 @@ export default function LandingPage() {
             // }}
             >
                 <div className={styles.homeQuote}>
-                    <Title order={1} className={styles.order1}>PLAY,</Title>
-                    <Title order={1} className={styles.order2}>RELAX,</Title>
-                    <Title style={{ marginBottom: '0.2%' }} order={1} className={styles.order3}>RESPAWN.</Title>
-                    <Title order={6} className={styles.order4}>
+                    <Text  className={styles.order1}>PLAY,</Text>
+                    <Text  className={styles.order1}>RELAX,</Text>
+                    <Text style={{ marginBottom: '0.2%' }}  className={styles.order1}>RESPAWN.</Text>
+                    <Text className={styles.order4}>
                         JOIN US AT <span>RESPAWN GAMING.</span>
-                    </Title>
+                    </Text>
                 </div>
                 <Image className={styles.ps5Main}
                     width={150}
@@ -277,7 +277,7 @@ export default function LandingPage() {
             // }}
             >
                 <div className={styles.circularBack}></div>
-                <Title order={1}>OUR SERVICES</Title>
+                <Title order={2}>OUR SERVICES</Title>
                 <div className={styles.mainGrid}>
                     {gridDetails}
                 </div>
@@ -329,7 +329,7 @@ export default function LandingPage() {
                         alt={'dual sensor controller ps5'}
                     />
                 </div>
-                <Title order={1}>ABOUT US</Title>
+                <Title order={2}>ABOUT US</Title>
                 <Text ref={aboutText} className={`${aboutTextIsVisible ? styles.animationslideUP : ''}`} >At <span> RESPAWN GAMING</span>, we are dedicated to providing the best gaming experience. Whether you’re a fan of the latest PS5 games or nostalgic for retro classics, we have something for everyone. Our cozy lounge is the perfect place to relax and play.</Text>
             </Container>
             <footer>
