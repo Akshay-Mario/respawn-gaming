@@ -259,7 +259,7 @@ export default function LandingPage() {
                     ease={80}
                     color={'#ffffff'}
                 />
-                <Anchor href="https://www.google.com/maps/dir//Tata+Consultancy+Services,+Infopark+E,+Kakkanad,+Kerala" target="_blank" >
+                <Anchor style={{position: 'relative' ,zIndex: '5000'}} href="https://maps.app.goo.gl/1P1SKcRu12p1cdVY6" target="_blank" >
                     <span>
                         <Image
                             color={'white'}
@@ -394,8 +394,8 @@ export default function LandingPage() {
                                     alt={'mail to respawn gaming'}
                                 />
                                 respawngamingllp@gmail.com
-                            </a>
-                            <a className={styles.direction} href="https://www.google.com/maps/dir//Tata+Consultancy+Services,+Infopark+E,+Kakkanad,+Kerala" target="_blank" >
+                            </a> 
+                            <a className={styles.direction} href="https://maps.app.goo.gl/1P1SKcRu12p1cdVY6" target="_blank" >
                                 <Image
                                     color={'red'}
                                     width={13}

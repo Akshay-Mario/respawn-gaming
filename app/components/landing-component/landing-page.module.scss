@@ -353,11 +353,16 @@
         font-size: larger;
         display: flex;
         align-items: center;
+        padding-bottom: 0px;
 
         // align-self: flex-end;
         span {
             padding-right: 10px;
         }
+
+    }
+    @media (max-width: 991px) {
+        padding-bottom: 50px;
 
     }
 
