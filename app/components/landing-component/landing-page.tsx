@@ -237,7 +237,7 @@ export default function LandingPage() {
                     <Text  className={styles.order1}>RELAX,</Text>
                     <Text style={{ marginBottom: '0.2%' }}  className={styles.order1}>RESPAWN.</Text>
                     <Text className={styles.order4}>
-                        JOIN US AT <span>RESPAWN GAMING.</span>
+                        JOIN US AT <Title order={1}>RESPAWN GAMING.</Title>
                     </Text>
                 </div>
                 <Image className={styles.ps5Main}

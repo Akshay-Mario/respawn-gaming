@@ -284,7 +284,7 @@
             animation: fadeInUp 1s ease forwards;
             animation-delay: 0.9s;
 
-            span {
+            h1 {
                 color: #ff4500; // Adjust the color as needed
             }
         }
@@ -337,9 +337,12 @@
         font-size: 20px;
         color: var(--font-color-light);
         z-index: 1;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
 
 
-        span {
+        h1 {
             padding-left: 10px;
             font-size: larger;
             color: var(--font-color-red);
