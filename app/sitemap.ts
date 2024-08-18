@@ -7,10 +7,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       priority: 1,
     },
-    {
-        url: 'https://maps.app.goo.gl/1P1SKcRu12p1cdVY6',
-        lastModified: new Date(),
-        priority: 0.6,
-      },
   ]
 }
