@@ -10,9 +10,9 @@ export default function LandingPage() {
 
     const [menuOverlayToggle, setmenuOverlayToggle] = useState(false);
     const { ref: ps5, inView: ps5IsVisible } = useInView({ triggerOnce: true });
-    const { ref: retroGames, inView: retroGamesIsVisible } = useInView({ triggerOnce: true});
-    const { ref: stayTuned, inView: stayTunedIsVisible } = useInView({ triggerOnce: true});
-    const { ref: aboutText, inView: aboutTextIsVisible } = useInView({ triggerOnce: true})
+    const { ref: retroGames, inView: retroGamesIsVisible } = useInView({ triggerOnce: true });
+    const { ref: stayTuned, inView: stayTunedIsVisible } = useInView({ triggerOnce: true });
+    const { ref: aboutText, inView: aboutTextIsVisible } = useInView({ triggerOnce: true })
 
     const homeRef = useRef(null);
     const servicesRef = useRef(null);
@@ -77,7 +77,7 @@ export default function LandingPage() {
             imageurl: 'assets/images/instagram.svg',
         },
         {
-            link: '#',
+            link: 'https://wa.me/+917907856810',
             altText: 'whatsapp',
             imageurl: 'assets/images/whatsapp.svg',
         },
@@ -147,12 +147,15 @@ export default function LandingPage() {
 
     const socials = socialsData.map((item, index) => {
         return (
-            <Image key={index}
-                className={styles.socials}
-                width={50}
-                src={item.imageurl}
-                alt={item.altText}
-            />
+            <Anchor key={index} className={styles.socials} href={item?.link} target="_blank">
+                <Image 
+                    className={styles.imageWidth}
+                    width={35}
+                    src={item.imageurl}
+                    alt={item.altText}
+                />
+            </Anchor>
+
         );
     })
 
@@ -233,9 +236,9 @@ export default function LandingPage() {
             // }}
             >
                 <div className={styles.homeQuote}>
-                    <Text  className={styles.order1}>PLAY,</Text>
-                    <Text  className={styles.order1}>RELAX,</Text>
-                    <Text style={{ marginBottom: '0.2%' }}  className={styles.order1}>RESPAWN.</Text>
+                    <Text className={styles.order1}>PLAY,</Text>
+                    <Text className={styles.order1}>RELAX,</Text>
+                    <Text style={{ marginBottom: '0.2%' }} className={styles.order1}>RESPAWN.</Text>
                     <Text className={styles.order4}>
                         JOIN US AT <Title order={1}>RESPAWN GAMING.</Title>
                     </Text>
@@ -259,7 +262,7 @@ export default function LandingPage() {
                     ease={80}
                     color={'#ffffff'}
                 />
-                <Anchor style={{position: 'relative' ,zIndex: '5000'}} href="https://maps.app.goo.gl/1P1SKcRu12p1cdVY6" target="_blank" >
+                <Anchor style={{ position: 'relative', zIndex: '5000' }} href="https://maps.app.goo.gl/1P1SKcRu12p1cdVY6" target="_blank" >
                     <span>
                         <Image
                             color={'white'}
@@ -355,24 +358,7 @@ export default function LandingPage() {
                             </div>
                         </div>
                         <Group className={styles.titleLinksFooter}>
-                            <Anchor href="#Home" target="_blank" >
-                                HOME
-                            </Anchor>
-                            <Anchor href="#Services" target="_blank" >
-                                SERVICES
-                            </Anchor>
-                            <Anchor href="#Gallery" target="_blank" >
-                                GALLERY
-                            </Anchor>
-                            <Anchor href="#Pricing" target="_blank" >
-                                PRICING
-                            </Anchor>
-                            <Anchor href="#About" target="_blank" >
-                                ABOUT
-                            </Anchor>
-                            <Anchor href="#Contact" target="_blank" >
-                                CONTACT
-                            </Anchor>
+                            {titleLinks}
                         </Group>
                         <div className={styles.contactus}>
                             <Title order={2}>
@@ -394,7 +380,7 @@ export default function LandingPage() {
                                     alt={'mail to respawn gaming'}
                                 />
                                 respawngamingllp@gmail.com
-                            </a> 
+                            </a>
                             <a className={styles.direction} href="https://maps.app.goo.gl/1P1SKcRu12p1cdVY6" target="_blank" >
                                 <Image
                                     color={'red'}

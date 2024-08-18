@@ -1001,6 +1001,9 @@
 
     .socials {
         padding-right: 20px;
+        .imageWidth {
+           padding: 1px;
+        }
     }
 
     .titleLinksFooter {
@@ -1109,6 +1112,9 @@
                     width: 12%;
                     padding-right: 0px;
                     // padding-right: 15px;
+                    .imageWidth {
+                        padding: 2px;
+                     }
                 }
             }
 
