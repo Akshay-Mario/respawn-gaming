@@ -73,7 +73,7 @@ export default function LandingPage() {
             imageurl: 'assets/images/x.svg',
         },
         {
-            link: '#',
+            link: 'https://www.instagram.com/respawngaming_kochi',
             altText: 'instagram',
             imageurl: 'assets/images/instagram.svg',
         },
