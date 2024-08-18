@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { useInView } from "react-intersection-observer";
 import Particles from "../particles-component/particles";
 import Pricing from "../pricing-component/pricing";
+import FloatingComponent from "../floating-component/floating-component";
 
 
 export default function LandingPage() {
@@ -229,6 +230,7 @@ export default function LandingPage() {
                 </Group>
 
             </Paper>
+            <FloatingComponent/>
             <Container ref={homeRef} className={`${styles.section1} ${menuOverlayToggle ? styles.section1MoveDown : ''}`}
             // style={{
             //     zIndex: 0,
@@ -335,6 +337,7 @@ export default function LandingPage() {
                 <Title order={2}>ABOUT US</Title>
                 <Text ref={aboutText} className={`${aboutTextIsVisible ? styles.animationslideUP : ''}`} >At <span> RESPAWN GAMING</span>, we are dedicated to providing the best gaming experience. Whether you’re a fan of the latest PS5 games or nostalgic for retro classics, we have something for everyone. Our cozy lounge is the perfect place to relax and play.</Text>
             </Container>
+            
             <footer>
                 <Container ref={contactRef} className={styles.footer}
                 // style={{

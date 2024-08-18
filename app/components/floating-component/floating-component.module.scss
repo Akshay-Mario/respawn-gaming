@@ -1,0 +1,33 @@
+.floatingWhatsapp {
+
+
+    .imageWidth {
+        fill: rgb(26, 194, 104);
+        position: fixed;
+        bottom: 50px;
+        right: 50px;
+        z-index: 1000;
+        width: 50px;
+        animation: 2s bounce infinite;
+        filter: drop-shadow(0 0 20px #00ff008c);
+    }
+
+
+
+    @media (max-width: 767px) {
+        .imageWidth {
+            bottom: 50px;
+            right: 20px;
+        }
+    }
+
+}
+
+@keyframes bounce {
+    0%, 100% {
+        filter: drop-shadow(0 0 20px #00ff00a8);
+      }
+      40% {
+        filter: drop-shadow(0 0 10px #00ff0069);
+      }
+}
