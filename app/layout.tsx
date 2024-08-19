@@ -18,7 +18,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="icon" href="/favicon.svg" />
+        <link rel="icon" href="/favicon.png" type="image/png"></link>
         <link rel="canonical" href="https://www.respawngaming.in/" />
       </head>
       <body className={inter.className}>{children}</body>
