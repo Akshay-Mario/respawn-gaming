@@ -35,7 +35,7 @@ const Pricing: React.FC<PricingProps> = ({menuOverlayToggle}) => {
                     <div className={`${styles.topDiv} ${price200IsVisible ? styles.animationSlideLeft : ''}`}>
                         <Text className={styles.textHeader}>Dual Controller</Text>
                         <div style={{ display: "flex" }}>
-                            <Text className={styles.price}>₹280</Text><Text className={styles.pHour}>p/hour</Text>
+                            <Text className={styles.price}>₹300</Text><Text className={styles.pHour}>p/hour</Text>
                         </div>
                     </div>
 
@@ -47,7 +47,7 @@ const Pricing: React.FC<PricingProps> = ({menuOverlayToggle}) => {
                     <div className={`${styles.topDiv} ${price400IsVisible ? styles.animationSlideLeft : ''}`}>
                         <Text className={styles.textHeader}>Triple Controller</Text>
                         <div style={{ display: "flex" }}>
-                            <Text className={styles.price}>₹400</Text><Text className={styles.pHour}>p/hour</Text>
+                            <Text className={styles.price}>₹450</Text><Text className={styles.pHour}>p/hour</Text>
                         </div>
                     </div>
 
@@ -57,7 +57,7 @@ const Pricing: React.FC<PricingProps> = ({menuOverlayToggle}) => {
                     <div className={`${styles.topDiv} ${price500IsVisible ? styles.animationSlideLeft : ''}`}>
                         <Text className={styles.textHeader}>Quadtruple Controller</Text>
                         <div style={{ display: "flex" }}>
-                            <Text className={styles.price}>₹500</Text><Text className={styles.pHour}>p/hour</Text>
+                            <Text className={styles.price}>₹600</Text><Text className={styles.pHour}>p/hour</Text>
                         </div>
                     </div>
 
